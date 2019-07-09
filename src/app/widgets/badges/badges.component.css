@@ -1,0 +1,15 @@
+.badges {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+:host {
+    position: relative;
+    width: 100%;
+}
+
+.badge-svg {
+    width: 30px;
+    height: 30px;
+}

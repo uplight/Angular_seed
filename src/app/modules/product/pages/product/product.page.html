@@ -1,0 +1,31 @@
+    <mat-card>
+        <mat-card-header>
+            <mat-checkbox #compareCheck>
+            </mat-checkbox>
+            <br/>
+            <app-badges [badges]="product?.badges" badge-type="on top of image"></app-badges>
+        </mat-card-header>
+
+        <mat-card-content>
+            <!--put with image template later on-->
+            <ng-template #blankImage let-productName="description">
+                <p class="warn">{{productName}} has no image yet.</p>
+            </ng-template>
+
+            <app-product-content [product]="product" [noImageTpl]="blankImage">
+                <app-product-image [imageUrl]="'assets/images/products/'+product?.imageUrl">
+                </app-product-image>
+                <p>More content here about product</p>
+            </app-product-content>
+
+        </mat-card-content>
+
+        <mat-card-footer>
+            <div>
+                <app-product-info [product]="product"></app-product-info>
+                <app-product-purchase [product]="product"></app-product-purchase>
+            </div>
+        </mat-card-footer>
+    </mat-card>
+
+

@@ -1,0 +1,40 @@
+<div>
+    <link itemprop="url" href="#"/>
+
+    <div *ngIf="product?.promo">
+        <span>{{product.promo}}</span>
+    </div>
+
+    <div>
+        <span>{{product?.brand}}</span>
+        <div class="product-name">
+            {{product?.title}}
+        </div>
+    </div>
+
+    <div [appHighlighted]="true"
+         (toggleHighlight)="onOver($event)"
+         #highligted="export-as-hl"
+    >
+        <div>Model #
+            <span itemprop="model">
+                                    {{product?.model}}
+                                </span>
+        </div>
+        <div>SKU #
+            <span> {{product?.id}} </span>
+        </div>
+    </div>
+    <div>
+        <div (click)="highligted.toggle()">
+            <div class="rating-link-stars">
+                <span class="rating-link-stars-overlay"
+                      [style.width]="(product?.rating | rating)+'%'"
+                ></span>
+            </div>
+            <meta itemprop="worstRating" content="1"/>
+            <meta itemprop="ratingValue" content="3"/>
+            <meta itemprop="bestRating" content="5"/>
+        </div>
+    </div>
+</div>

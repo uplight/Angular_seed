@@ -1,0 +1,59 @@
+<div class="hdca-product-box__main-purchase">
+
+    <div class="hdca-product-box__main-purchase-price" itemprop="offers" itemscope=""
+         itemtype="http://schema.org/Offer">
+        <span itemprop="priceCurrency" content="CAD"></span>
+        <link itemprop="itemCondition" href="http://schema.org/NewCondition" content="New"/>
+
+        <!--Price 1-->
+        <div class="hdca-product-box__main-purchase-price-entry"
+             *ngIf="product?.price2"
+        >
+                                <span class="hdca-product-box__main-purchase-price-entry-content hdca-product-box__main-purchase-price-entry-content--primary">
+                                    {{product?.price2}}
+                                </span>
+            <span class="hdca-product-box__main-purchase-price-entry-content"> / sq. ft.</span>
+        </div>
+        <div class="hdca-product-box__main-purchase-price-entry">
+
+            <!--Price 2-->
+            <span class="hdca-product-box__main-purchase-price-entry-content">$
+                              <span itemprop="price">
+                                  {{product?.price1}}
+                              </span> / case</span>
+        </div>
+        <div class="hdca-product-box__main-purchase-price-entry hdca-product-box__main-purchase-price-entry--savings">
+            <time itemprop="priceValidUntil" datetime="2020-11-05"></time>
+            <span class="hdca-product-box__main-purchase-price-entry-content hdca-product-box__main-purchase-price-entry-content--primary">Save 22%</span>
+            <span class="hdca-product-box__main-purchase-price-entry-content hdca-product-box__main-purchase-price-entry-content--was"> Was $41.48</span>
+        </div>
+    </div>
+
+    <!-- Add to Cart / View details   -->
+    <ng-container [ngSwitch]="product?.addToCart">
+
+        <div
+                *ngSwitchCase="'viewDetails'"
+                class="hdca-product-box__main-purchase-action hdca-product-box__main-purchase-action--tool-rental">
+            <button id="button-1380"
+                    class="hdca-button2 hdca-button2--tertiary hdca-button2--is-narrow hdca-product-box__main-purchase-action-item">
+                <span class="hdca-button2__label">View Details</span>
+            </button>
+        </div>
+
+        <div
+                *ngSwitchCase="'addToCart'"
+                class="hdca-product-box__main-purchase-action hdca-product-box__main-purchase-action--tool-rental">
+            <button id="button-1379"
+                    class="hdca-button2 hdca-button2--primary hdca-button2--is-narrow hdca-product-box__main-purchase-action-item">
+                <span class="hdca-button2__label">Add To Cart</span>
+            </button>
+        </div>
+
+        <div *ngSwitchDefault>
+            Hello
+
+        </div>
+
+    </ng-container>
+</div>

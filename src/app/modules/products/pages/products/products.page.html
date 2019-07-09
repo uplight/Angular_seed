@@ -1,0 +1,9 @@
+<section>
+    <div  class="product-container">
+        <div *ngFor="let product of (products$ | async)">
+            <product-page [product]="product" class="product-page">
+            </product-page>
+
+        </div>
+    </div>
+</section>
