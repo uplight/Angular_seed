@@ -1,5 +1,5 @@
 import {AfterViewInit, Component, ElementRef, OnInit, ViewChild} from '@angular/core';
-import {DataStoreService} from '@app/core/data-store.service';
+import {DataStoreService} from '@app/core/services/data/data-store.service';
 import {concat, fromEvent, Observable} from 'rxjs';
 import {concatMap, debounceTime, distinctUntilChanged, map, switchMap, tap} from 'rxjs/operators';
 import {createHttpObservable} from '@app/core/services/apis/api-cancelable';

@@ -1,5 +1,5 @@
 import {Component, OnDestroy} from '@angular/core';
-import {DataStoreService} from '@app/core/data-store.service';
+import {DataStoreService} from '@app/core/services/data/data-store.service';
 import {Observable, Subscription} from 'rxjs';
 import {VOProduct} from '@product/models/product.model';
 import {map, tap} from 'rxjs/operators';

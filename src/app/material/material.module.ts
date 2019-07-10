@@ -1,14 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {MatCardModule, MatCheckboxModule} from '@angular/material';
+import {ProfileFormComponent} from '@app/material/profile-form/profile-form.component';
 
 @NgModule({
   exports: [
     MatCheckboxModule,
-    MatCardModule
+    MatCardModule,
+    ProfileFormComponent
   ],
 
-  declarations: [],
+  declarations: [
+    ProfileFormComponent
+  ],
   imports: [
     CommonModule,
     MatCheckboxModule,

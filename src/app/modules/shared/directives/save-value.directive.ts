@@ -27,7 +27,7 @@ export class SaveValueDirective implements OnInit, AfterViewInit {
   }
 
   @HostListener('change', ['$event']) onChange(evt) {
-    evt.checked ? localStorage.setItem(this.id,'true'): localStorage.removeItem(this.id);
+    evt.checked ? localStorage.setItem(this.id, 'true'): localStorage.removeItem(this.id);
   }
 
   ngAfterViewInit() {

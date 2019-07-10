@@ -3,7 +3,7 @@ import {PRODUCT_DEFAULT, VOProduct} from '@product/models/product.model';
 import {BehaviorSubject, Observable, Subscription} from 'rxjs';
 import {filter, map, tap} from 'rxjs/operators';
 import {ActivatedRoute} from '@angular/router';
-import {DataStoreService} from '@app/core/data-store.service';
+import {DataStoreService} from '@app/core/services/data/data-store.service';
 import {select, Store} from '@ngrx/store';
 import {AppState} from '@app/core/reducers';
 import {selectProductById} from '@product/store/product.selectors';
