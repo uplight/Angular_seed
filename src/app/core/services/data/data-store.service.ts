@@ -1,8 +1,9 @@
 import {Injectable} from '@angular/core';
 import {ApiProductsService} from '@app/core/services/apis/api-products.service';
 import {BehaviorSubject, noop, Observable} from 'rxjs';
-import {VOProduct} from '@product/models/product.model';
+
 import {map} from 'rxjs/operators';
+import {VOProduct} from '@app/core/models/products';
 
 @Injectable({
   providedIn: 'root'

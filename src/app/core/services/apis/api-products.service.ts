@@ -1,8 +1,9 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
-import {VOProduct} from '@product/models/product.model';
+
 import {map} from 'rxjs/operators';
+import {VOProduct} from '@app/core/models/products';
 
 @Injectable({
   providedIn: 'root'

@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {VOProduct} from '@product/models/product.model';
+import {VOProduct} from '@app/core/models/products';
 
 @Component({
   selector: 'app-product-purchase',

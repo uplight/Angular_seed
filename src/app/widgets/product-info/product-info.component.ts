@@ -1,6 +1,7 @@
 import {AfterViewInit, Component, Input, OnInit, ViewChild} from '@angular/core';
-import {VOProduct} from '@product/models/product.model';
+
 import {HighlightedDirective} from '@app/com/directives/highlighted.directive';
+import {VOProduct} from '@app/core/models/products';
 
 @Component({
   selector: 'app-product-info',

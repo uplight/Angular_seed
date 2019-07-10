@@ -1,10 +1,11 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
-import {AuthGuard} from '../../auth/auth.guard';
+
 import {SelectivePreloadingStrategyService} from './selective-preloading-strategy.service';
 import {LandingPage} from '@app/core/landing/landing/landing.page';
 import {PageNotFoundComponent} from '@app/core/landing/page-not-found/page-not-found.component';
-import {AppRolesGuard} from '@shared/guards/app-roles.guard';
+import {AuthGuard} from '@app/auth/auth.guard';
+
 
 
 const appRoutes: Routes = [
@@ -12,12 +13,11 @@ const appRoutes: Routes = [
     path: 'landing',
     component: LandingPage
   },
-
- /* {
+  {
     path: 'core',
-    loadChildren: () => import('../core.module').then(mod => mod.CoreModule)
-   //  data: {preload: true}
-  },*/
+    loadChildren: () => import('../core.module').then(mod => mod.CoreModule),
+    data: {preload: true}
+  },
 
   /*,
   {
