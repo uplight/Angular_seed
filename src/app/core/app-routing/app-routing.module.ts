@@ -19,6 +19,12 @@ const appRoutes: Routes = [
     data: {preload: true}
   },
 
+  {
+    path: 'product',
+    loadChildren: () => import('@app/product/product.module').then(mod => mod.ProductModule),
+    data: {preload: true}
+  },
+
   /*,
   {
     path: 'admin',

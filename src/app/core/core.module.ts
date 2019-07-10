@@ -14,6 +14,7 @@ import {AuthGuard} from '@app/auth/auth.guard';
 export const appRoutes: Routes = [
   {
     path: '', component: StartComponent
+
     // loadChildren: '@app/modules/products/products.module#ProductsModule',
  //   canActivate: [AppRolesGuard],
    /* data: {
