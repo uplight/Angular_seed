@@ -1,15 +1,12 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {RatingPipe} from './rating.pipe';
+import {RatingPipe} from '../../com/pipes/rating.pipe';
 import {MatButtonModule, MatCheckboxModule, MatIconModule, MatInputModule} from '@angular/material';
 import {StoreModule} from '@ngrx/store';
 import {productsReducers} from '@product/store/products.reducers';
 import {EffectsModule} from '@ngrx/effects';
 import {ProductsEffects} from '@product/store/products.effects';
-import { RbacAllowDirective } from './directives/rbac-allow.directive';
-import { HighlightedDirective } from './directives/highlighted.directive';
-import { DigiMaskDirective } from './directives/digi-mask.directive';
-import {SaveValueDirective} from '@shared/directives/save-value.directive';
+import {SaveValueDirective} from '@app/com/directives/save-value.directive';
 @NgModule({
   imports: [
     CommonModule,
@@ -25,18 +22,11 @@ import {SaveValueDirective} from '@shared/directives/save-value.directive';
     MatButtonModule,
     MatCheckboxModule,
     MatIconModule,
-    RbacAllowDirective,
-    HighlightedDirective,
-    DigiMaskDirective,
-    SaveValueDirective
 
   ],
   declarations: [
     RatingPipe,
-    RbacAllowDirective,
-    HighlightedDirective,
-    DigiMaskDirective,
-    SaveValueDirective
+
   ]
 })
 export class SharedModule {

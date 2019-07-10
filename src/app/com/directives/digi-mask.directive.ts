@@ -3,7 +3,7 @@ import {Directive, ElementRef, HostListener, Input, OnInit} from '@angular/core'
 import * as _ from 'lodash';
 
 
-import {maskDigitValidators, neverValidator} from '@shared/directives/digit_validators';
+import {maskDigitValidators, neverValidator} from '@app/com/directives/digit_validators';
 import {findIndex, includes, findLastIndex} from 'lodash';
 
 

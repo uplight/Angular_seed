@@ -1,7 +1,7 @@
 import {NgModule} from '@angular/core';
 import {HttpClientModule} from '@angular/common/http';
 import {RouterModule, Routes} from '@angular/router';
-import {LandingPage} from '@landing/landing/landing.page';
+import {LandingPage} from '@app/core/landing/landing/landing.page';
 import {CommonModule} from '@angular/common';
 import {AppRolesGuard} from '@shared/guards/app-roles.guard';
 
