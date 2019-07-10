@@ -10,7 +10,7 @@ import {createHttpObservable} from '@app/core/services/apis/api-cancelable';
 })
 export class LandingPage implements AfterViewInit, OnInit {
 
-  @ViewChild('searchInput', {static: false}) searchInput: ElementRef;
+ //  @ViewChild('searchInput', {static: false}) searchInput: ElementRef;
 
   productIds$: Observable<string[]>;
   myId = '0';
@@ -18,10 +18,10 @@ export class LandingPage implements AfterViewInit, OnInit {
   lessons$: Observable<any[]>;
 
   constructor(
-    private dataService: DataStoreService
+    // private dataService: DataStoreService
   ) {
-    this.productIds$ = dataService.products$
-      .pipe(map(products => products.map(item => item.id)));
+   /* this.productIds$ = dataService.products$
+      .pipe(map(products => products.map(item => item.id)));*/
   }
 
 
@@ -30,7 +30,7 @@ export class LandingPage implements AfterViewInit, OnInit {
   }
 
   ngAfterViewInit(): void {
-
+/*
    const searchLessons$ = fromEvent<any>(this.searchInput.nativeElement, 'keyup')
       .pipe(
         map(event => event.target.value),
@@ -43,7 +43,7 @@ export class LandingPage implements AfterViewInit, OnInit {
 
     const initLessons$ = this.loadLessons();
     this.lessons$ = concat(initLessons$, searchLessons$);
-   // this.lessons$.subscribe(console.log);
+   // this.lessons$.subscribe(console.log);*/
   }
 
 

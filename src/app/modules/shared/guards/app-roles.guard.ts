@@ -3,7 +3,7 @@ import {ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot, UrlTre
 import {Observable} from 'rxjs';
 import {AuthService} from '@app/auth/auth.service';
 import {map, take, tap} from 'rxjs/operators';
-import * as _ from 'lodash';
+// import * as _ from 'lodash';
 
 @Injectable({
   providedIn: 'root'
@@ -22,7 +22,7 @@ export class AppRolesGuard implements CanActivate {
     return this.auth.user$.pipe(
       take(1),
       tap(user => console.log(user)),
-      map(user => _.intersection(roles, user.roles).length !== 0),
+      map(user => true), // _.intersection(roles, user.roles).length !== 0),
       tap(isAllow => {
         console.log(isAllow)
       })

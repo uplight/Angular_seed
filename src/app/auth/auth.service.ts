@@ -4,7 +4,7 @@ import {BehaviorSubject, Observable} from 'rxjs';
 import {HttpClient} from '@angular/common/http';
 import {Router} from '@angular/router';
 import * as auth0 from 'auth0-js';
-import * as  moment from 'moment';
+
 
 export interface User {
   id: string;
@@ -93,7 +93,7 @@ export class AuthService {
   }
 
   public isLoggedIn() {
-    return moment().isBefore(this.getExpiration());
+    return  true ; // moment().isBefore(this.getExpiration());
   }
 
   isLoggedOut() {
@@ -103,12 +103,12 @@ export class AuthService {
   getExpiration() {
     const expiration = localStorage.getItem('expires_at');
     const expiresAt = JSON.parse(expiration);
-    return moment(expiresAt);
+    return 0 ; // moment(expiresAt);
   }
 
   private setSession(authResult) {
 
-    const expiresAt = moment().add(authResult.expiresIn, 'second');
+    const expiresAt = 123; // moment().add(authResult.expiresIn, 'second');
 
     localStorage.setItem('id_token', authResult.idToken);
     localStorage.setItem('expires_at', JSON.stringify(expiresAt.valueOf()));

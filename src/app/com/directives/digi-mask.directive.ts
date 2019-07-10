@@ -1,10 +1,9 @@
 import {Directive, ElementRef, HostListener, Input, OnInit} from '@angular/core';
 
-import * as _ from 'lodash';
 
 
 import {maskDigitValidators, neverValidator} from '@app/com/directives/digit_validators';
-import {findIndex, includes, findLastIndex} from 'lodash';
+
 
 
 
@@ -75,8 +74,8 @@ export class DigiMaskDirective implements OnInit {
 
       this.input.value = this.buildPlaceHolder();
 
-      const firstPlaceholderPos = findIndex(this.input.value,
-        char => char === '_');
+      const firstPlaceholderPos = 0 // findIndex(this.input.value,
+       //  char => char === '_');
 
       this.input.setSelectionRange(firstPlaceholderPos, firstPlaceholderPos);
 
@@ -149,16 +148,16 @@ export class DigiMaskDirective implements OnInit {
   calculatePreviousCursorPos(cursorPos) {
     const valueBeforeCursor = this.input.value.slice(0, cursorPos);
 
-    return  findLastIndex(valueBeforeCursor,
-      char => ! includes(SPECIAL_CHARACTERS, char) );
+    return  0 // findLastIndex(valueBeforeCursor,
+    //   char => ! includes(SPECIAL_CHARACTERS, char) );
 
   }
 
   handleRightArrow(cursorPos) {
     const valueAfterCursor = this.input.value.slice(cursorPos + 1);
 
-    const nextPos =
-      findIndex(valueAfterCursor, char => !includes(SPECIAL_CHARACTERS, char) );
+    const nextPos = 0
+     //  findIndex(valueAfterCursor, char => !includes(SPECIAL_CHARACTERS, char) );
 
     if (nextPos >= 0) {
 
@@ -175,8 +174,8 @@ export class DigiMaskDirective implements OnInit {
 
     return chars.reduce((result, char) => {
 
-      return result +=
-        includes(SPECIAL_CHARACTERS, char) ? char : '_'
+      return result += 1
+       //  includes(SPECIAL_CHARACTERS, char) ? char : '_'
 
     }, '');
 

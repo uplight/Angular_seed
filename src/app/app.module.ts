@@ -12,39 +12,33 @@ import {ProductsEffects} from '@product/store/products.effects';
 
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {AuthInterceptor} from '@app/auth/auth-interceptor';
-import {AppRoutingModule} from '@app/app-routing/app-routing.module';
+import {AppRoutingModule} from '@app/core/app-routing/app-routing.module';
 import {LandingPage} from '@app/core/landing/landing/landing.page';
 import {PageNotFoundComponent} from '@app/core/landing/page-not-found/page-not-found.component';
 import {MaterialModule} from '@app/material/material.module';
 import {DirectivesModule} from '@app/com/directives/directives.module';
 import {PipesModule} from '@app/com/pipes/pipes.module';
 import {CommonModule} from '@angular/common';
+import {RouterModule} from '@angular/router';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    LandingPage,
-    PageNotFoundComponent
   ],
   imports: [
     CommonModule,
     BrowserModule,
+    AppRoutingModule
+ /*   BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule,
-    MaterialModule,
     DirectivesModule,
-    PipesModule,
     HttpClientXsrfModule.withOptions({
       cookieName: 'XSRF-TOKEN',
       headerName: 'x-xsrf-token'
-    }),
-    StoreModule.forRoot(reducers, {metaReducers}),
-    StoreDevtoolsModule.instrument(),
-    EffectsModule.forRoot([]),
-    StoreModule.forFeature('products', productsReducers),
-    EffectsModule.forFeature([ProductsEffects])
+    }),*/
   ],
   providers: [
     {

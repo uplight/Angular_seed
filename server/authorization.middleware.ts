@@ -1,5 +1,5 @@
 import {Request, Response, NextFunction} from 'express';
-import * as _ from 'lodash';
+
 
 export function checkIfAuthorized(
   allowedRoles: string[],
@@ -10,7 +10,7 @@ export function checkIfAuthorized(
 
   const userInfo = req['user'];
 
-  const roles = _.intersection(userInfo.roles, allowedRoles);
+  const roles = [] // _.intersection(userInfo.roles, allowedRoles);
 
   if (roles.length > 0) {
     next();

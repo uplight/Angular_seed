@@ -1,3 +1,4 @@
+/*
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {ProductPage} from '@product/pages/product/product.page';
@@ -11,6 +12,7 @@ import {MaterialModule} from '@app/material/material.module';
 import { ProductContentComponent } from './pages/product/product-content/product-content.component';
 import {CommonModule} from '@angular/common';
 import {PipesModule} from '@app/com/pipes/pipes.module';
+import {DirectivesModule} from '@app/com/directives/directives.module';
 
 
 export const productRoutes: Routes = [
@@ -28,6 +30,7 @@ export const productRoutes: Routes = [
   imports: [
     CommonModule,
     PipesModule,
+    DirectivesModule,
     WidgetsModule,
     MaterialModule,
     RouterModule.forChild(productRoutes)
@@ -43,3 +46,4 @@ export const productRoutes: Routes = [
 })
 export class ProductModule {
 }
+*/

@@ -1,3 +1,4 @@
+
 /*
 import {NgModule} from '@angular/core';
 import {HttpClientModule} from '@angular/common/http';
@@ -7,10 +8,6 @@ import {CommonModule} from '@angular/common';
 import {AppRolesGuard} from '@shared/guards/app-roles.guard';
 
 export const appRoutes: Routes = [
-  {
-    path: 'landing',
-    loadChildren: '@app/modules/landing/landing.module#LandingModule',
-  },
   {
     path: 'products',
     loadChildren: '@app/modules/products/products.module#ProductsModule',
@@ -32,11 +29,12 @@ export const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes)
   ],
   exports: [
-    RouterModule,
     HttpClientModule
   ],
   providers: []
 })
+
 export class CoreModule {
 }
+
 */

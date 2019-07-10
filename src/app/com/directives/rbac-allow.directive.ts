@@ -1,6 +1,6 @@
 import {Directive, Input, OnDestroy, TemplateRef, ViewContainerRef} from '@angular/core';
 import {AuthService, User} from '@app/auth/auth.service';
-import * as _ from 'lodash';
+
 
 @Directive({
   selector: '[rbacAllow]'
@@ -32,7 +32,7 @@ export class RbacAllowDirective implements OnDestroy {
     if (!this.allowedRoles || this.allowedRoles.length === 0 || !this.user) {
       this.viewContainer.clear();
     } else {
-     const ar =  _.intersection(this.allowedRoles, this.user.roles);
+     const ar =  [] //  _.intersection(this.allowedRoles, this.user.roles);
       if (ar.length) {
         this.viewContainer.createEmbeddedView(this.templateRef);
       } else {

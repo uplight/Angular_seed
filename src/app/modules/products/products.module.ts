@@ -1,7 +1,7 @@
+/*
 import {NgModule} from '@angular/core';
 import {ProductsPage} from '@products/pages/products/products.page';
 import {RouterModule, Routes} from '@angular/router';
-import {ProductModule, productRoutes} from '@product/product.module';
 import {StoreModule} from '@ngrx/store';
 import {productsReducers} from '@product/store/products.reducers';
 import {EffectsModule} from '@ngrx/effects';
@@ -10,6 +10,7 @@ import {CommonModule} from '@angular/common';
 import {PipesModule} from '@app/com/pipes/pipes.module';
 import {WidgetsModule} from '@app/widgets/widgets.module';
 import {MaterialModule} from '@app/material/material.module';
+import {DirectivesModule} from '@app/com/directives/directives.module';
 
 export const isProductsExists = () => {
 
@@ -30,6 +31,7 @@ export const productsRoutes: Routes = [
   imports: [
     CommonModule,
     PipesModule,
+    DirectivesModule,
     WidgetsModule,
     MaterialModule,
     RouterModule.forChild(productsRoutes),
@@ -40,3 +42,4 @@ export const productsRoutes: Routes = [
     ]
 })
 export class ProductsModule { }
+*/
