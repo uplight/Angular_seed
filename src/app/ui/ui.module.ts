@@ -9,13 +9,7 @@ import {ReactiveFormsModule} from '@angular/forms';
   ],
   declarations: [],
   imports: [
-    CommonModule,
-    MatInputModule,
-    MatButtonModule,
-    MatSelectModule,
-    MatRadioModule,
-    MatCardModule,
-    ReactiveFormsModule
+    CommonModule
   ]
 })
 export class UiModule {

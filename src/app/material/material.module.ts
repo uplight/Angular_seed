@@ -1,13 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {MatCardModule, MatCheckboxModule} from '@angular/material';
+import {MatCardModule, MatCheckboxModule, MatFormFieldModule, MatIconModule, MatRadioModule, MatSelectModule} from '@angular/material';
 import {ProfileFormComponent} from '@app/material/profile-form/profile-form.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   exports: [
     MatCheckboxModule,
     MatCardModule,
-    ProfileFormComponent
+    ProfileFormComponent,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatRadioModule,
+    MatIconModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
 
   declarations: [
@@ -15,8 +22,14 @@ import {ProfileFormComponent} from '@app/material/profile-form/profile-form.comp
   ],
   imports: [
     CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
     MatCheckboxModule,
-    MatCardModule
+    MatCardModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatRadioModule,
+    MatIconModule
   ]
 })
 export class MaterialModule { }

@@ -1,7 +1,6 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {ProductPage} from '@product/pages/product/product.page';
-import {SharedModule} from '@shared/shared.module';
 import {productsReducers} from '@product/store/products.reducers';
 import {StoreModule} from '@ngrx/store';
 import {EffectsModule} from '@ngrx/effects';
@@ -10,6 +9,8 @@ import {ProductStoreComponent} from './pages/product-store/product-store.compone
 import {WidgetsModule} from '@app/widgets/widgets.module';
 import {MaterialModule} from '@app/material/material.module';
 import { ProductContentComponent } from './pages/product/product-content/product-content.component';
+import {CommonModule} from '@angular/common';
+import {PipesModule} from '@app/com/pipes/pipes.module';
 
 
 export const productRoutes: Routes = [
@@ -25,7 +26,8 @@ export const productRoutes: Routes = [
 
 @NgModule({
   imports: [
-    SharedModule,
+    CommonModule,
+    PipesModule,
     WidgetsModule,
     MaterialModule,
     RouterModule.forChild(productRoutes)

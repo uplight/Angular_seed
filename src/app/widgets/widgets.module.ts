@@ -6,11 +6,12 @@ import { ProductImageComponent } from './product-image/product-image.component';
 import { ProductPromoComponent } from './product-promo/product-promo.component';
 import { ProductPurchaseComponent } from './product-purchase/product-purchase.component';
 import { ProductInfoComponent } from './product-info/product-info.component';
-import {SharedModule} from '@shared/shared.module';
+import {PipesModule} from '@app/com/pipes/pipes.module';
+import {DirectivesModule} from '@app/com/directives/directives.module';
+
 
 @NgModule({
   exports: [
-    SharedModule,
     MaterialModule,
     BadgesComponent,
     ProductImageComponent,
@@ -28,7 +29,8 @@ import {SharedModule} from '@shared/shared.module';
   imports: [
     CommonModule,
     MaterialModule,
-    SharedModule
+    PipesModule,
+    DirectivesModule
   ]
 })
 export class WidgetsModule { }

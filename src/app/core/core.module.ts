@@ -1,3 +1,4 @@
+/*
 import {NgModule} from '@angular/core';
 import {HttpClientModule} from '@angular/common/http';
 import {RouterModule, Routes} from '@angular/router';
@@ -38,3 +39,4 @@ export const appRoutes: Routes = [
 })
 export class CoreModule {
 }
+*/

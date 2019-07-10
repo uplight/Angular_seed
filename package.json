@@ -7,7 +7,7 @@
     "start": "ng serve --proxy-config ./proxy.conf.json --ssl --ssl-key key.pem --ssl-cert cert.pem",
     "test": "./node_modules/.bin/ng test",
     "lint": "./node_modules/.bin/ng lint",
-    "prod": "ng build --prod --aot",
+    "prod": "ng build --prod",
     "mock-server": "json-server --watch server/db.json",
     "start-server": "./node_modules/.bin/ts-node -P ./server/server.tsconfig.json ./server/server.ts --secure",
     "server": "./node_modules/.bin/nodemon  -w ./server --ext \".ts\" --exec \"npm run start-server\"",
@@ -18,7 +18,9 @@
     "jwt-check-hs256": "node ./demos/jwt-check-hs256.js",
     "jwt-rs256": "node ./demos/jwt-rs256.js",
     "jwt-check-rs256": "node ./demos/jwt-check-rs256.js",
-    "csrf-server": "./node_modules/.bin/http-server -c-1 ."
+    "csrf-server": "./node_modules/.bin/http-server -c-1 .",
+    "build-analize": "ng build --stats-json",
+    "analize": "webpack-bundle-analyzer dist/stats-es2015.json"
   },
   "dependencies": {
     "@angular/animations": "^8.2.0-next.0",

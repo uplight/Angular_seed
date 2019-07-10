@@ -1,11 +1,14 @@
 <a routerLink="/products">All Products</a>
 <br/>
 
+<input #searchInput matInput placeholder="Search">
+<!--
 <mat-form-field>
-    <input #searchInput matInput placeholder="Search">
+
     <mat-icon matSuffix>search</mat-icon>
     <mat-hint>Start Type to perform search</mat-hint>
 </mat-form-field>
+-->
 
 <br/>
 
@@ -28,14 +31,11 @@
     <ng-container *ngFor="let id of (productIds$ | async)">
         <a routerLink="/product/store/{{id}}">{{id}}</a> <br/>
     </ng-container>
-
-
 </div>
 
 
-
 <div class="container">
-    <mat-form-field>
+   <!-- <mat-form-field>
         <input matInput digi-mask="(999) 999-9999" placeholder="Phone Number">
     </mat-form-field>
     <br/>
@@ -66,7 +66,7 @@
     <mat-form-field>
         <label>Text</label>
         <input matInput value="ABCD">
-    </mat-form-field>
+    </mat-form-field>-->
 
 
 </div>

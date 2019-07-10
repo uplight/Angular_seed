@@ -4,7 +4,9 @@ import {RatingPipe} from '@app/com/pipes/rating.pipe';
 
 
 @NgModule({
-  exports: [RatingPipe],
+  exports: [
+    RatingPipe
+  ],
   declarations: [
     RatingPipe
   ],

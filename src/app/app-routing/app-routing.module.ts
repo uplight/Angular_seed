@@ -10,8 +10,7 @@ import {AppRolesGuard} from '@shared/guards/app-roles.guard';
 const appRoutes: Routes = [
   {
     path: 'landing',
-    component: LandingPage,
-    outlet: 'popup'
+    component: LandingPage
   },
   {
     path: 'admin',
@@ -43,7 +42,11 @@ const appRoutes: Routes = [
   ],
   exports: [
     RouterModule
+  ],
+  declarations: [
+
   ]
 })
+
 export class AppRoutingModule {
 }
