@@ -18,12 +18,10 @@ const appRoutes: Routes = [
     loadChildren: () => import('../core.module').then(mod => mod.CoreModule),
     data: {preload: true}
   },
-
-  {
+ /* {
     path: 'product',
-    loadChildren: () => import('@app/product/product.module').then(mod => mod.ProductModule),
-    data: {preload: true}
-  },
+    loadChildren: () => import('@app/product/product.module').then(mod => mod.ProductModule)
+  },*/
 
   /*,
   {

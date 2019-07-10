@@ -13,6 +13,8 @@ import {AppRoutingModule} from '@app/core/app-routing/app-routing.module';
 
 import {CommonModule} from '@angular/common';
 import {RouterModule} from '@angular/router';
+import {MaterialModule} from '@app/material/material.module';
+import {MatSidenavModule} from '@angular/material';
 
 
 @NgModule({
@@ -22,8 +24,10 @@ import {RouterModule} from '@angular/router';
   imports: [
     CommonModule,
     BrowserModule,
+    BrowserAnimationsModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatSidenavModule
  /*   BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
