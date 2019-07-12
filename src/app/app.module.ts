@@ -9,12 +9,13 @@ import {StoreDevtoolsModule} from '@ngrx/store-devtools';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import {AuthInterceptor} from '@app/auth/auth-interceptor';
-import {AppRoutingModule} from '@app/core/app-routing/app-routing.module';
+import {AppRoutingModule} from '@app/landing/app-routing.module';
 
 import {CommonModule} from '@angular/common';
 import {RouterModule} from '@angular/router';
 import {MaterialModule} from '@app/material/material.module';
 import {MatSidenavModule} from '@angular/material';
+import {HeaderModule} from '@app/core/header/header.module';
 
 
 @NgModule({
@@ -27,7 +28,9 @@ import {MatSidenavModule} from '@angular/material';
     BrowserAnimationsModule,
     HttpClientModule,
     AppRoutingModule,
-    MatSidenavModule
+    StoreModule.forRoot(reducers, {metaReducers}),
+    StoreDevtoolsModule.instrument(),
+    EffectsModule.forRoot([])
  /*   BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
@@ -36,7 +39,16 @@ import {MatSidenavModule} from '@angular/material';
     HttpClientXsrfModule.withOptions({
       cookieName: 'XSRF-TOKEN',
       headerName: 'x-xsrf-token'
-    }),*/
+    }),
+
+    MatInputModule,
+    MatButtonModule,
+    MatSelectModule,
+    MatRadioModule,
+    MatCardModule,
+    ReactiveFormsModule
+
+  */
   ],
   providers: [
     {

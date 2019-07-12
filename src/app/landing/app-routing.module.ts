@@ -2,8 +2,8 @@ import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 
 import {SelectivePreloadingStrategyService} from './selective-preloading-strategy.service';
-import {LandingPage} from '@app/core/landing/landing/landing.page';
-import {PageNotFoundComponent} from '@app/core/landing/page-not-found/page-not-found.component';
+import {LandingPage} from '@app/landing/landing/landing.page';
+import {PageNotFoundComponent} from '@app/landing/page-not-found/page-not-found.component';
 import {AuthGuard} from '@app/auth/auth.guard';
 
 
@@ -15,28 +15,12 @@ const appRoutes: Routes = [
   },
   {
     path: 'core',
-    loadChildren: () => import('../core.module').then(mod => mod.CoreModule),
+    loadChildren: () => import('../core/core.module').then(mod => mod.CoreModule),
     data: {preload: true}
   },
  /* {
     path: 'product',
     loadChildren: () => import('@app/product/product.module').then(mod => mod.ProductModule)
-  },*/
-
-  /*,
-  {
-    path: 'admin',
-    loadChildren: () => import('../../admin/admin.module').then(mod => mod.AdminModule),
-    canLoad: [AuthGuard]
-  },
-  {
-    path: 'products',
-    loadChildren: () => import('@products/products.module').then(mod => mod.ProductsModule),
-    data: {preload: true}
-  },
-  {
-    path: 'product',
-    loadChildren: '@app/modules/product/product.module#ProductModule',
   },*/
   {path: '**', component: PageNotFoundComponent},
 

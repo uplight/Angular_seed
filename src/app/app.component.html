@@ -1,56 +1,11 @@
-<mat-sidenav-container >
-    <mat-sidenav #sidenav>
-            <a routerLink='/market-cap/selected'>Coin Market Cap</a>
-            <hr/>
-            <a routerLink='/trader/common-markets'>Common Markets</a>
-            <hr/>
+<ng-template #appHeader>
+        <div>Template content</div>
+</ng-template>
 
-            <a [routerLink]="['/trader/live-trader']" queryParamsHandling="preserve" >Trader</a>
-            &nbsp;&nbsp;
-            <a routerLink='/my-exchange/balances/'>Balances</a>
-            <hr/>
-            <a  routerLink='/login/register'>Register</a>
-
-    </mat-sidenav>
-
-    <div class="navbar">
-        <div (click)="sidenav.open()" class="fa fa-bars btn large round"> Open </div>            &nbsp;
-        <ng-container *ngIf="isMenu">
-
-            <a routerLink="/keys">Keys</a>
-            <a  class="btn dred small " (click)="onClearStorage()">Clear Storage</a>
-        </ng-container>
-
-        <div class="right">
-            <a [ngClass] ="imageClass" (click)="onDogClick()" class="btn watchdog">    </a>
-        </div>
-        &nbsp;&nbsp;
-        <a routerLink="/market-cap/gainers-losers">
-            <span class="fa fa-thumbs-o-up fa-2x btn yellow"></span>
-            <span class="fa fa-thumbs-o-down fa-flip-horizontal fa-2x btn yellow"></span>
-        </a>
-        &nbsp;&nbsp;
-
-        &nbsp;&nbsp;
-        <a routerLink="/trader/order-reports"><span class="fa fa-flag-checkered fa-2x"></span></a>
-        &nbsp;&nbsp;
-        <a routerLink="/balances">Balances</a>
-        &nbsp;&nbsp;
-
-
-    </div>
-    <div id="MainOutlet" [ngClass]="bgColor">
-        <br/>
-        <h1 class="mat-h2">
-            {{title}}
-        </h1>
-        <a routerLink="/landing">Landing</a>
-        <a routerLink="/core/admin">Admin</a>
-        <router-outlet></router-outlet>
-    </div>
+<router-outlet></router-outlet>
 
 
 
-</mat-sidenav-container>
+
 
 

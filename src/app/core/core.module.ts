@@ -2,15 +2,15 @@
 import {NgModule} from '@angular/core';
 import {HttpClientModule} from '@angular/common/http';
 import {RouterModule, Routes} from '@angular/router';
-import {LandingPage} from '@app/core/landing/landing/landing.page';
+import {LandingPage} from '@app/landing/landing/landing.page';
 import {CommonModule} from '@angular/common';
 import {MaterialModule} from '@app/material/material.module';
 import {PipesModule} from '@app/com/pipes/pipes.module';
 import {DirectivesModule} from '@app/com/directives/directives.module';
 import {AuthGuard} from '@app/auth/auth.guard';
 import { CoreEntryComponent } from './core-entry/core-entry.component';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-
+import {HeaderModule} from '@app/core/header/header.module';
+import {SettingsModule} from '@app/core/settings/settings.module';
 
 export const appRoutes: Routes = [
   {
@@ -24,9 +24,10 @@ export const appRoutes: Routes = [
   },
   {
     path: 'admin',
-    loadChildren: () => import('../admin/admin.module').then(mod => mod.AdminModule),
+    loadChildren: () => import('../modules/admin/admin.module').then(mod => mod.AdminModule),
     canLoad: [AuthGuard]
   },
+
   /*{
     path: 'product',
     loadChildren: '@app/modules/product/product.module#ProductModule',
@@ -41,7 +42,9 @@ export const appRoutes: Routes = [
     RouterModule.forChild(appRoutes),
     PipesModule,
     DirectivesModule,
-    MaterialModule
+    MaterialModule,
+    HeaderModule,
+    SettingsModule
   ],
   exports: [
     MaterialModule,
@@ -51,7 +54,6 @@ export const appRoutes: Routes = [
   ],
   providers: [],
   declarations: [
-
     CoreEntryComponent
   ]
 })
