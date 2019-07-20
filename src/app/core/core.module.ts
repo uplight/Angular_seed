@@ -34,7 +34,6 @@ export const appRoutes: Routes = [
      canLoad: [AuthGuard]
 
   },
-
   /*{
     path: 'product',
     loadChildren: '@app/modules/product/product.module#ProductModule',

@@ -1,5 +1,7 @@
 import {Component, ComponentFactory, ComponentFactoryResolver, Inject, Injectable, Type, ViewContainerRef} from '@angular/core';
 import {NavMenuComponent} from '@app/core/menu/nav-menu/nav-menu.component';
+import {IS_MOBILE} from '@app/core/is-mobile';
+
 
 @Injectable({
   providedIn: 'root'
@@ -11,9 +13,11 @@ export class CoreUiService {
   settings: ViewContainerRef;
   private isDone;
   constructor(
-    private componentFactoryResolver: ComponentFactoryResolver
+    private componentFactoryResolver: ComponentFactoryResolver,
+    @Inject(IS_MOBILE) isMobile: string
   ) {
 
+    console.log(isMobile);
   }
 
   setContainerRef(toolbar: ViewContainerRef, menu: ViewContainerRef, settings: ViewContainerRef) {

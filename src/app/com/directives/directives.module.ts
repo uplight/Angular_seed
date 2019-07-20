@@ -4,6 +4,7 @@ import {RbacAllowDirective} from '@app/com/directives/rbac-allow.directive';
 import {HighlightedDirective} from '@app/com/directives/highlighted.directive';
 import {DigiMaskDirective} from '@app/com/directives/digi-mask.directive';
 import {SaveValueDirective} from '@app/com/directives/save-value.directive';
+import { IsMobileDirective } from './is-mobile.directive';
 
 
 
@@ -12,13 +13,15 @@ import {SaveValueDirective} from '@app/com/directives/save-value.directive';
     RbacAllowDirective,
     HighlightedDirective,
     DigiMaskDirective,
-    SaveValueDirective
+    SaveValueDirective,
+    IsMobileDirective
   ],
   declarations: [
     RbacAllowDirective,
     HighlightedDirective,
     DigiMaskDirective,
-    SaveValueDirective
+    SaveValueDirective,
+    IsMobileDirective
   ],
   imports: [
     CommonModule

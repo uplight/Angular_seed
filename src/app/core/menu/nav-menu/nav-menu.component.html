@@ -17,23 +17,6 @@
                 <a mat-list-item routerLink='/login/register'>Register</a>
             </mat-list>
         </mat-sidenav>
-
-        <div>
-            <div>
-                <div (click)="sidenav.open()" > OPEN</div>            &nbsp;
-
-                <a routerLink="/market-cap/gainers-losers">
-                    <span class="fa fa-thumbs-o-up fa-2x btn yellow"></span>
-                    <span class="fa fa-thumbs-o-down fa-flip-horizontal fa-2x btn yellow"></span>
-                </a>
-                &nbsp;&nbsp;
-                <!-- <app-scanner></app-scanner>-->
-                &nbsp;&nbsp;
-                <a routerLink="/trader/order-reports"><span class="fa fa-flag-checkered fa-2x"></span></a>
-                &nbsp;&nbsp;
-                <a routerLink="/balances">Balances</a>
-            </div>
-        </div>
         <div class="main-content">
             <router-outlet></router-outlet>
         </div>
