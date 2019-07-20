@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SettingsPanelComponent } from './settings-panel/settings-panel.component';
+import {MatListModule} from '@angular/material';
 
 
 
@@ -10,7 +11,8 @@ import { SettingsPanelComponent } from './settings-panel/settings-panel.componen
   ],
   declarations: [SettingsPanelComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    MatListModule
   ]
 })
 export class SettingsModule { }

@@ -1,16 +1,9 @@
-<mat-toolbar color="primary">
-    <mat-toolbar-row>
-        <span (click)="onFirstClick($event)">Custom Toolbar</span>
-    </mat-toolbar-row>
-    <mat-toolbar-row>
-        <span>Second Line</span>
-        <span class="example-spacer"></span>
-        <mat-icon class="example-icon" aria-hidden="false" aria-label="Example user verified icon">verified_user</mat-icon>
-    </mat-toolbar-row>
-    <mat-toolbar-row>
-        <span>Third Line</span>
-        <span class="example-spacer"></span>
-        <mat-icon class="example-icon" aria-hidden="false" aria-label="Example heart icon">favorite</mat-icon>
-        <mat-icon class="example-icon" aria-hidden="false" aria-label="Example delete icon">delete</mat-icon>
-    </mat-toolbar-row>
-</mat-toolbar>
+<div class="app-toolbar">
+    <mat-toolbar color="primary">
+        <mat-toolbar-row>
+            <mat-icon (click)="onFirstClick($event)">menu</mat-icon>
+            <span class="example-spacer"></span>
+            <mat-icon class="example-icon" (click)="onSettingsClick($event)">settings</mat-icon>
+        </mat-toolbar-row>
+    </mat-toolbar>
+</div>

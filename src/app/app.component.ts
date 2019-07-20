@@ -37,7 +37,9 @@ export class AppComponent implements AfterViewInit {
 
    const sub =  router.events.subscribe(evt => {
      if (evt instanceof RouteConfigLoadEnd) {
-       this.router.navigateByUrl('/core')
+       console.log(' preloading end ');
+       sub.unsubscribe();
+       // this.router.navigateByUrl('/core')
      }
    })
   }

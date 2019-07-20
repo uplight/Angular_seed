@@ -15,10 +15,8 @@ export class SelectivePreloadingStrategyService implements PreloadingStrategy {
 
       // log the route path to the console
       console.log('Preloaded: ' + route.path);
-      const res = load();
-      res.subscribe(d => console.log(d))
 
-      return res
+      return load()
     } else {
       return of(null);
     }

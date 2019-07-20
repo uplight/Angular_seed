@@ -1,4 +1,5 @@
 import {Component, ComponentFactory, ComponentFactoryResolver, Inject, Injectable, Type, ViewContainerRef} from '@angular/core';
+import {NavMenuComponent} from '@app/core/menu/nav-menu/nav-menu.component';
 
 @Injectable({
   providedIn: 'root'
@@ -21,13 +22,30 @@ export class CoreUiService {
     this.settings = settings;
   }
 
-  addComponents(toolbarFactory: ComponentFactory<any>, menuFactory: ComponentFactory<any>, settingsFactory: ComponentFactory<any>) {
+  addComponents(toolbarFactory: ComponentFactory<any>,
+                menuFactory: ComponentFactory<NavMenuComponent>,
+                settingsFactory: ComponentFactory<any>) {
     if (this.isDone) { return; }
     this.isDone = true;
+    const v2: any = this.menu.createComponent(menuFactory);
 
-    const v1 = this.toolbar.createComponent(toolbarFactory);
-    const v2 = this.menu.createComponent(menuFactory);
-    const v3 = this.settings.createComponent(settingsFactory);
+    const v1: any = this.toolbar.createComponent(toolbarFactory);
+    v1._component.menuClick.subscribe(evt => {
+      console.log(evt);
+      switch (evt) {
+        case 'menu':
+          return v2._component.toggle();
+        case 'settings':
+          return
+      }
+    });
+
+
+
+   //  const v3 = this.settings.createComponent(settingsFactory);
+  }
+
+  openMenu() {
 
   }
 

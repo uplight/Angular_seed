@@ -9,11 +9,14 @@ import {AuthGuard} from '@app/modules/auth/auth.guard';
 const appRoutes: Routes = [
   {
     path: 'landing',
-    component: LandingPage
+    component: LandingPage,
+    outlet: 'settings'
   },
   {
     path: 'core',
-    loadChildren: () => import('./core/core.module').then(mod => mod.CoreModule),
+    loadChildren: () => import('./core/core.module').then(mod => {
+      return mod.CoreModule
+    }),
     data: {preload: true}
   },
   {path: '**', component: PageNotFoundComponent},
@@ -40,4 +43,5 @@ const appRoutes: Routes = [
 })
 
 export class AppRoutingModule {
+
 }

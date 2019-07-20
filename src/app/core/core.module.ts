@@ -1,5 +1,5 @@
 
-import {NgModule} from '@angular/core';
+import {ComponentFactory, ComponentFactoryResolver, NgModule} from '@angular/core';
 import {HttpClientModule} from '@angular/common/http';
 import {RouterModule, Routes} from '@angular/router';
 import {LandingPage} from '@app/landing/landing/landing.page';
@@ -16,6 +16,7 @@ import {MatButtonModule} from '@angular/material';
 import {SettingsPanelComponent} from '@app/core/settings/settings-panel/settings-panel.component';
 import {NavMenuComponent} from '@app/core/menu/nav-menu/nav-menu.component';
 import {MenuModule} from '@app/core/menu/menu.module';
+import {CoreUiService} from '@app/core/core-ui.service';
 
 export const appRoutes: Routes = [
   {
@@ -73,6 +74,16 @@ export const appRoutes: Routes = [
 })
 
 export class CoreModule {
+
+  constructor(
+    private coreService: CoreUiService,
+    private componentFactoryResolver: ComponentFactoryResolver
+  ) {
+    const toolbar: ComponentFactory<any> =  componentFactoryResolver.resolveComponentFactory(HeaderComponent);
+    const menu: ComponentFactory<any> =  componentFactoryResolver.resolveComponentFactory(NavMenuComponent);
+  //  const settings: ComponentFactory<any> =  componentFactoryResolver.resolveComponentFactory(SettingsPanelComponent);
+    coreService.addComponents(toolbar, menu, null);
+  }
 }
 
 
