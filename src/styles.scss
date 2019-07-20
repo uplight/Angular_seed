@@ -1,6 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
+
+.example-icon {
+  padding: 0 14px;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
 .highlighted {
   box-shadow: #1c8150 3px 10px 10px;
 }
@@ -45,3 +54,7 @@
 .rating-link-stars::before { color: #efefef; content: '\2605\2605\2605\2605\2605'; }
 .rating-link-stars-overlay { color: #f58220; position: absolute; padding: 0; top: 0; left: 0; overflow: hidden; }
 .rating-link-stars-overlay::before { content: '\2605\2605\2605\2605\2605'; }
+
+a {
+  margin: 2px;
+}

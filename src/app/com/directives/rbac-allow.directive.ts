@@ -1,5 +1,5 @@
 import {Directive, Input, OnDestroy, TemplateRef, ViewContainerRef} from '@angular/core';
-import {AuthService, User} from '@app/auth/auth.service';
+import {AuthService, User} from '@app/modules/auth/auth.service';
 
 
 @Directive({

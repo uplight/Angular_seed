@@ -8,13 +8,13 @@ import {metaReducers, reducers} from '@app/core/reducers';
 import {StoreDevtoolsModule} from '@ngrx/store-devtools';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
-import {AuthInterceptor} from '@app/auth/auth-interceptor';
-import {AppRoutingModule} from '@app/landing/app-routing.module';
+import {AuthInterceptor} from '@app/modules/auth/auth-interceptor';
+import {AppRoutingModule} from '@app/app-routing.module';
 
 import {CommonModule} from '@angular/common';
 import {RouterModule} from '@angular/router';
 import {MaterialModule} from '@app/material/material.module';
-import {MatSidenavModule} from '@angular/material';
+import {MatButtonModule, MatSidenavModule} from '@angular/material';
 import {HeaderModule} from '@app/core/header/header.module';
 
 

@@ -1,13 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {
+  MatButtonModule,
   MatCardModule,
-  MatCheckboxModule,
+  MatCheckboxModule, MatDialogModule,
   MatFormFieldModule,
   MatIconModule, MatListModule,
   MatRadioModule,
   MatSelectModule,
-  MatSidenavModule
+  MatSidenavModule, MatToolbarModule
 } from '@angular/material';
 import {ProfileFormComponent} from '@app/material/profile-form/profile-form.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
@@ -25,7 +26,10 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     FormsModule,
     ReactiveFormsModule,
     MatSidenavModule,
-    MatListModule
+    MatListModule,
+    MatDialogModule,
+    MatButtonModule,
+    MatToolbarModule
   ],
 
   declarations: [
@@ -42,7 +46,10 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     MatRadioModule,
     MatIconModule,
     MatSidenavModule,
-    MatListModule
+    MatListModule,
+    MatDialogModule,
+    MatButtonModule,
+    MatToolbarModule
   ]
 })
 export class MaterialModule { }
