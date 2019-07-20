@@ -1,31 +1,36 @@
-import {Component, ComponentFactoryResolver, Inject, Injectable, Type, ViewContainerRef} from '@angular/core';
+import {Component, ComponentFactory, ComponentFactoryResolver, Inject, Injectable, Type, ViewContainerRef} from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CoreUiService {
 
-  menuViewContainer: ViewContainerRef;
+  menu: ViewContainerRef;
+  toolbar: ViewContainerRef;
+  settings: ViewContainerRef;
+  private isDone;
   constructor(
     private componentFactoryResolver: ComponentFactoryResolver
   ) {
 
   }
 
-  setMenuContainerRef(viewContainerRef: ViewContainerRef) {
-    this.menuViewContainer = viewContainerRef;
+  setContainerRef(toolbar: ViewContainerRef, menu: ViewContainerRef, settings: ViewContainerRef) {
+    this.toolbar = toolbar;
+    this.menu = menu;
+    this.settings = settings;
   }
 
-  addMenu(componentFactory: any) {
-   //  this.componentFactoryResolver.resolveComponentFactory(component);
-   //  console.log(this.componentFactoryResolver)
+  addComponents(toolbarFactory: ComponentFactory<any>, menuFactory: ComponentFactory<any>, settingsFactory: ComponentFactory<any>) {
+    if (this.isDone) { return; }
+    this.isDone = true;
 
-  //  const componentFactory = this.componentFactoryResolver.resolveComponentFactory(component);
-      const viewContainerRef = this.menuViewContainer;
-   //  console.log(component, this.menuViewContainer);
-  //  viewContainerRef.clear();
-    const componentRef = viewContainerRef.createComponent(componentFactory);
+    const v1 = this.toolbar.createComponent(toolbarFactory);
+    const v2 = this.menu.createComponent(menuFactory);
+    const v3 = this.settings.createComponent(settingsFactory);
 
   }
+
+
 
 }

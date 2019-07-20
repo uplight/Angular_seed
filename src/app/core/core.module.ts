@@ -13,6 +13,9 @@ import {HeaderModule} from '@app/core/header/header.module';
 import {SettingsModule} from '@app/core/settings/settings.module';
 import {HeaderComponent} from '@app/core/header/header/header.component';
 import {MatButtonModule} from '@angular/material';
+import {SettingsPanelComponent} from '@app/core/settings/settings-panel/settings-panel.component';
+import {NavMenuComponent} from '@app/core/menu/nav-menu/nav-menu.component';
+import {MenuModule} from '@app/core/menu/menu.module';
 
 export const appRoutes: Routes = [
   {
@@ -48,7 +51,8 @@ export const appRoutes: Routes = [
     MaterialModule,
     HeaderModule,
     SettingsModule,
-    MatButtonModule
+    MatButtonModule,
+    MenuModule
   ],
   exports: [
     MaterialModule,
@@ -61,7 +65,11 @@ export const appRoutes: Routes = [
     CoreEntryComponent,
     HeaderComponent
   ],
-  entryComponents: [HeaderComponent]
+  entryComponents: [
+    HeaderComponent,
+    SettingsPanelComponent,
+    NavMenuComponent
+  ]
 })
 
 export class CoreModule {

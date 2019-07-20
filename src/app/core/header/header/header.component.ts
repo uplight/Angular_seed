@@ -10,6 +10,11 @@ export class HeaderComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    console.log(' HeaderComponent  init ');
   }
 
+  onFirstClick($event: MouseEvent) {
+    console.log($event);
+
+  }
 }

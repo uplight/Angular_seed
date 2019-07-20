@@ -1,5 +1,6 @@
 import {AfterViewInit, Component, Inject, ReflectiveInjector, ViewChild, ViewContainerRef} from '@angular/core';
 import {CoreUiService} from '@app/core/core-ui.service';
+import {RouteConfigLoadEnd, Router} from '@angular/router';
 
 @Component({
     selector: 'app-component',
@@ -9,22 +10,40 @@ export class AppComponent implements AfterViewInit {
   title = 'app works!';
 
 
-  @ViewChild('appHeader', {
+  @ViewChild('appToolbar', {
     read: ViewContainerRef,
     static: true,
-  }) viewContainerRef: ViewContainerRef;
+  }) appToolbar: ViewContainerRef;
+
+  @ViewChild('appMenu', {
+    read: ViewContainerRef,
+    static: true,
+  }) appMenu: ViewContainerRef;
+
+  @ViewChild('appSettings', {
+    read: ViewContainerRef,
+    static: true,
+  }) appSettings: ViewContainerRef;
 
   isMenu: any;
   imageClass: any;
   bgColor: any;
 
   constructor(
+    private router: Router,
     private coreUIServoce: CoreUiService
 
-  ) { }
+  ) {
+
+   const sub =  router.events.subscribe(evt => {
+     if (evt instanceof RouteConfigLoadEnd) {
+       this.router.navigateByUrl('/core')
+     }
+   })
+  }
 
   ngAfterViewInit(): void {
-    this.coreUIServoce.setMenuContainerRef(this.viewContainerRef);
+    this.coreUIServoce.setContainerRef(this.appToolbar, this.appMenu, this.appSettings);
   }
 
   onClearStorage() {

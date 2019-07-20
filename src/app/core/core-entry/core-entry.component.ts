@@ -1,7 +1,9 @@
-import {AfterViewChecked, Component, ComponentFactoryResolver, OnInit} from '@angular/core';
+import {AfterViewChecked, Component, ComponentFactory, ComponentFactoryResolver, OnInit} from '@angular/core';
 import {CoreUiService} from '@app/core/core-ui.service';
 import {HeaderComponent} from '@app/core/header/header/header.component';
 import {MatDialog} from '@angular/material';
+import {NavMenuComponent} from '@app/core/menu/nav-menu/nav-menu.component';
+import {SettingsPanelComponent} from '@app/core/settings/settings-panel/settings-panel.component';
 
 @Component({
   selector: 'app-core-entry',
@@ -15,8 +17,10 @@ export class CoreEntryComponent implements OnInit, AfterViewChecked {
     private coreUI: CoreUiService,
     private componentFactoryResolver: ComponentFactoryResolver
   ) {
-    const componentFactory =  componentFactoryResolver.resolveComponentFactory(HeaderComponent);
-    this.coreUI.addMenu(componentFactory);
+    const toolbar: ComponentFactory<any> =  componentFactoryResolver.resolveComponentFactory(HeaderComponent);
+    const menu: ComponentFactory<any> =  componentFactoryResolver.resolveComponentFactory(NavMenuComponent);
+    const settings: ComponentFactory<any> =  componentFactoryResolver.resolveComponentFactory(SettingsPanelComponent);
+    this.coreUI.addComponents(toolbar, menu, settings);
   }
 
   ngOnInit(): void {

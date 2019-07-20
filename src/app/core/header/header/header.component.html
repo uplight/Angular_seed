@@ -1,14 +1,12 @@
 <mat-toolbar color="primary">
     <mat-toolbar-row>
-        <span>Custom Toolbar</span>
+        <span (click)="onFirstClick($event)">Custom Toolbar</span>
     </mat-toolbar-row>
-
     <mat-toolbar-row>
         <span>Second Line</span>
         <span class="example-spacer"></span>
         <mat-icon class="example-icon" aria-hidden="false" aria-label="Example user verified icon">verified_user</mat-icon>
     </mat-toolbar-row>
-
     <mat-toolbar-row>
         <span>Third Line</span>
         <span class="example-spacer"></span>
