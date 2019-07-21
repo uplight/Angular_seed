@@ -13,16 +13,16 @@ import { CoreEntryComponent } from './core-entry/core-entry.component';
 import {SettingsModule} from '@app/core/layout/settings/settings.module';
 
 import {MatButtonModule} from '@angular/material';
-import {SettingsPanelComponent} from '@app/core/layout/settings/settings-panel/settings-panel.component';
-
 import {LayoutService} from '@app/core/layout/layout.service';
 import {LayoutMainComponent} from '@app/core/layout/layout-main/layout-main.component';
 import {LayoutModule} from '@app/core/layout/layout.module';
+import {AdminEntryComponent} from '@app/modules/admin/admin-entry/admin-entry.component';
+import {AdminModule} from '@app/modules/admin/admin.module';
+import {ProductModule} from '@product/product.module';
 
 export const appRoutes: Routes = [
   {
     path: '', component: CoreEntryComponent
-
     // loadChildren: '@app/modules/products/products.module#ProductsModule',
     //   canActivate: [AppRolesGuard],
     /* data: {
@@ -31,13 +31,14 @@ export const appRoutes: Routes = [
   },
      {
      path: 'admin',
-     loadChildren: () => import('../modules/admin/admin.module').then(mod => mod.AdminModule),
+       component: AdminEntryComponent,
+    // loadChildren: () => import('../modules/admin/admin.module').then(mod => mod.AdminModule),
      canLoad: [AuthGuard]
 
   },
-  /*{
+ /* {
     path: 'product',
-    loadChildren: '@app/modules/product/product.module#ProductModule',
+    component: Pro,
   },*/
 //   {path: '**', redirectTo: 'landing'}
 ];
@@ -51,8 +52,9 @@ export const appRoutes: Routes = [
     DirectivesModule,
     MaterialModule,
     SettingsModule,
-    MatButtonModule,
-    LayoutModule
+    LayoutModule,
+    AdminModule,
+    ProductModule
   ],
   exports: [
     MaterialModule,
@@ -67,8 +69,6 @@ export const appRoutes: Routes = [
    //  HeaderComponent
   ],
   entryComponents: [
-  //  HeaderComponent,
-    SettingsPanelComponent,
     LayoutMainComponent
   ]
 })

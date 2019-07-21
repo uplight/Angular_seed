@@ -8,6 +8,8 @@ import {MaterialModule} from '@app/material/material.module';
 import {PipesModule} from '@app/com/pipes/pipes.module';
 import {DirectivesModule} from '@app/com/directives/directives.module';
 import {MatInputModule} from '@angular/material';
+import {UiModule} from '@app/ui/ui.module';
+import {WidgetsModule} from '@app/widgets/widgets.module';
 
 
 @NgModule({
@@ -21,7 +23,13 @@ import {MatInputModule} from '@angular/material';
     PipesModule,
     DirectivesModule,
     RouterModule.forChild(productRoutes),
-    MatInputModule
+    MatInputModule,
+    UiModule,
+    WidgetsModule
   ]
 })
-export class ProductModule { }
+export class ProductModule {
+  constructor() {
+   // console.warn(' ProductModule')
+  }
+}

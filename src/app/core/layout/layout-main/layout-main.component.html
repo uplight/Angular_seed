@@ -4,7 +4,7 @@
     <mat-sidenav #settings position="end"  (closedStart)="onCloseSettings()">
         <mat-list>
             <mat-list-item>Item 1</mat-list-item>
-            <mat-list-item>Item 2</mat-list-item>
+            <mat-list-item> <a mat-list-item [routerLink]="[{ outlets: { settings: ['landing'] } }]">Landing</a></mat-list-item>
             <mat-list-item>Item 3</mat-list-item>
             <mat-list-item>Item 4</mat-list-item>
             <mat-list-item> 5</mat-list-item>
@@ -13,23 +13,17 @@
             <div class="settings-content">
                 <router-outlet name="settings"></router-outlet>
             </div>
-
         </div>
 
     </mat-sidenav>
 
     <mat-sidenav #sidenav position="start" (closedStart)="onCloseSideNav()">
         <mat-list>
-            <a mat-list-item routerLink='/core/admin'>Admin</a>
+            <a mat-list-item routerLink='/admin'>Admin</a>
             <hr/>
-            <a mat-list-item [routerLink]="[{ outlets: { settings: ['landing'] } }]">Landing</a>
-            <hr/>
-
-            <a mat-list-item [routerLink]="['/trader/live-trader']" queryParamsHandling="preserve">Trader</a>
+            <a mat-list-item [routerLink]="['/landing']" queryParamsHandling="preserve">Landing</a>
             &nbsp;&nbsp;
-
             <a mat-list-item routerLink='/scanner'>Scanner</a>
-
             <a mat-list-item routerLink='/my-exchange/balances/'>Balances</a>
             <hr/>
             <a mat-list-item routerLink='/login/register'>Register</a>

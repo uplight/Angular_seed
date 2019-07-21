@@ -16,7 +16,7 @@ import {MaterialModule} from '@app/material/material.module';
   imports: [
     CommonModule,
     RouterModule,
-    MaterialModule,
+    MaterialModule
   ]
 })
 export class LayoutModule { }
