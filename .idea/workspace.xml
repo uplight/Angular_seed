@@ -3,42 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a4d87f06-d532-408e-b7dc-fd9a92bd8862" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/core/core-entry/core-entry.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/core-entry/core-entry.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/core/core.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/core.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/core/layout/layout-main/layout-main.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/layout/layout-main/layout-main.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/core/layout/layout.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/layout/layout.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/core/layout/settings/settings-panel/settings-panel.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/utils/array/ARRAY.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/core/layout/settings/settings-panel/settings-panel.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/core/layout/settings/settings-panel/settings-panel.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/core/layout/settings/settings-panel/settings-panel.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/core/layout/settings/settings.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/layout/settings/settings.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/modules/admin/admin-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/modules/admin/admin-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/modules/product/product-routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/modules/product/product-routes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/modules/product/product.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/modules/product/product.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/modules/product/product/product.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/modules/product/product/product.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/modules/product/product/product.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/modules/product/product/product.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/ui/ui.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/ui/ui.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/widgets/badges/badges.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/ui/badges/badges.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/widgets/badges/badges.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/ui/badges/badges.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/widgets/badges/badges.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/ui/badges/badges.component.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/widgets/badges/badges.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/ui/badges/badges.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/widgets/product-image/product-image.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/ui/product-image/product-image.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/widgets/product-image/product-image.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/ui/product-image/product-image.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/widgets/product-image/product-image.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/ui/product-image/product-image.component.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/widgets/product-image/product-image.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/ui/product-image/product-image.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/widgets/product-info/product-info.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/ui/product-info/product-info.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/widgets/product-info/product-info.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/ui/product-info/product-info.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/widgets/product-info/product-info.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/ui/product-info/product-info.component.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/widgets/product-info/product-info.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/ui/product-info/product-info.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/widgets/product-promo/product-promo.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/ui/product-promo/product-promo.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/widgets/product-promo/product-promo.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/ui/product-promo/product-promo.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/widgets/product-promo/product-promo.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/ui/product-promo/product-promo.component.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/widgets/product-promo/product-promo.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/ui/product-promo/product-promo.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/widgets/product-purchase/product-purchase.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/ui/product-purchase/product-purchase.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/widgets/product-purchase/product-purchase.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/ui/product-purchase/product-purchase.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/widgets/product-purchase/product-purchase.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/ui/product-purchase/product-purchase.component.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/widgets/product-purchase/product-purchase.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/ui/product-purchase/product-purchase.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/widgets/widgets.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/widgets/widgets.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles.scss" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/dist/" />
     <ignored path="$PROJECT_DIR$/node_modules/" />
@@ -86,11 +52,29 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/modules/product/product/product.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="26" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
+            <state relative-caret-position="75">
+              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/styles.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="24" column="20" lean-forward="true" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/node_modules/@angular/material/_theming.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1174">
+              <caret line="4273" column="60" lean-forward="true" selection-start-line="4273" selection-start-column="60" selection-end-line="4273" selection-end-column="60" />
             </state>
           </provider>
         </entry>
@@ -140,30 +124,6 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/core/layout/settings/settings.module.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="4" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/core/core-entry/core-entry.component.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="22" lean-forward="true" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
-              <folding>
-                <element signature="e#0#110#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -182,6 +142,7 @@
       <find>products.m</find>
       <find>@product/product.module</find>
       <find>SettingsPanelComponent</find>
+      <find>mat-snack-bar-theme</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -222,7 +183,6 @@
         <option value="$PROJECT_DIR$/src/app/core/menu/menu.module.ts" />
         <option value="$PROJECT_DIR$/src/app/core/header/header/header.component.ts" />
         <option value="$PROJECT_DIR$/src/app/core/menu/nav-menu/nav-menu.component.ts" />
-        <option value="$PROJECT_DIR$/src/styles.scss" />
         <option value="$PROJECT_DIR$/src/app/core/menu/nav-menu/nav-menu.component.html" />
         <option value="$PROJECT_DIR$/src/app/core/core-ui.service.ts" />
         <option value="$PROJECT_DIR$/src/app/app.component.html" />
@@ -246,6 +206,7 @@
         <option value="$PROJECT_DIR$/src/app/modules/product/services/product.service.ts" />
         <option value="$PROJECT_DIR$/src/app/modules/product/product/product.component.ts" />
         <option value="$PROJECT_DIR$/src/app/modules/product/product/product.component.html" />
+        <option value="$PROJECT_DIR$/src/styles.scss" />
       </list>
     </option>
   </component>
@@ -291,72 +252,7 @@
               <item name="Angular_seed" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="services" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Angular_seed" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Angular_seed" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="services" type="462c0819:PsiDirectoryNode" />
-              <item name="apis" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Angular_seed" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Angular_seed" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Angular_seed" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Angular_seed" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="product" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Angular_seed" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Angular_seed" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="product" type="462c0819:PsiDirectoryNode" />
-              <item name="product" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Angular_seed" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Angular_seed" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="product" type="462c0819:PsiDirectoryNode" />
-              <item name="services" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Angular_seed" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Angular_seed" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="ui" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Angular_seed" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Angular_seed" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="utils" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Angular_seed" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Angular_seed" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
-              <item name="array" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -581,15 +477,21 @@
       <option name="project" value="LOCAL" />
       <updated>1563725450461</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="start theming">
+      <created>1563731744063</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1563731744063</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77986000" />
+    <option name="totallyTimeSpent" value="81739000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1422" y="205" width="1417" height="1383" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.71428573" visible="true" weight="0.25571114" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -634,19 +536,10 @@
     <MESSAGE value="settings" />
     <MESSAGE value="structural directive" />
     <MESSAGE value="layout module" />
-    <option name="LAST_COMMIT_MESSAGE" value="layout module" />
+    <MESSAGE value="start theming" />
+    <option name="LAST_COMMIT_MESSAGE" value="start theming" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/app/landing/selective-preloading-strategy.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="22" lean-forward="true" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/com/directives/rbac-allow.directive.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -707,13 +600,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/styles.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -992,8 +878,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/modules/product/product/product.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="26" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
+        <state relative-caret-position="75">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/styles.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="20" lean-forward="true" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/@angular/material/_theming.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1174">
+          <caret line="4273" column="60" lean-forward="true" selection-start-line="4273" selection-start-column="60" selection-end-line="4273" selection-end-column="60" />
         </state>
       </provider>
     </entry>
