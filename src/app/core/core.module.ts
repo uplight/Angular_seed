@@ -9,14 +9,15 @@ import {PipesModule} from '@app/com/pipes/pipes.module';
 import {DirectivesModule} from '@app/com/directives/directives.module';
 import {AuthGuard} from '@app/modules/auth/auth.guard';
 import { CoreEntryComponent } from './core-entry/core-entry.component';
-import {HeaderModule} from '@app/core/header/header.module';
-import {SettingsModule} from '@app/core/settings/settings.module';
-import {HeaderComponent} from '@app/core/header/header/header.component';
+
+import {SettingsModule} from '@app/core/layout/settings/settings.module';
+
 import {MatButtonModule} from '@angular/material';
-import {SettingsPanelComponent} from '@app/core/settings/settings-panel/settings-panel.component';
-import {NavMenuComponent} from '@app/core/menu/nav-menu/nav-menu.component';
-import {MenuModule} from '@app/core/menu/menu.module';
-import {CoreUiService} from '@app/core/core-ui.service';
+import {SettingsPanelComponent} from '@app/core/layout/settings/settings-panel/settings-panel.component';
+
+import {LayoutService} from '@app/core/layout/layout.service';
+import {LayoutMainComponent} from '@app/core/layout/layout-main/layout-main.component';
+import {LayoutModule} from '@app/core/layout/layout.module';
 
 export const appRoutes: Routes = [
   {
@@ -49,10 +50,9 @@ export const appRoutes: Routes = [
     PipesModule,
     DirectivesModule,
     MaterialModule,
-    HeaderModule,
     SettingsModule,
     MatButtonModule,
-    MenuModule
+    LayoutModule
   ],
   exports: [
     MaterialModule,
@@ -63,25 +63,24 @@ export const appRoutes: Routes = [
   providers: [],
   declarations: [
     CoreEntryComponent,
-    HeaderComponent
+    LayoutMainComponent
+   //  HeaderComponent
   ],
   entryComponents: [
-    HeaderComponent,
+  //  HeaderComponent,
     SettingsPanelComponent,
-    NavMenuComponent
+    LayoutMainComponent
   ]
 })
 
 export class CoreModule {
 
   constructor(
-    private coreService: CoreUiService,
+    private layout: LayoutService,
     private componentFactoryResolver: ComponentFactoryResolver
   ) {
-    const toolbar: ComponentFactory<any> =  componentFactoryResolver.resolveComponentFactory(HeaderComponent);
-    const menu: ComponentFactory<any> =  componentFactoryResolver.resolveComponentFactory(NavMenuComponent);
-  //  const settings: ComponentFactory<any> =  componentFactoryResolver.resolveComponentFactory(SettingsPanelComponent);
-    coreService.addComponents(toolbar, menu, null);
+    const main: ComponentFactory<any> =  componentFactoryResolver.resolveComponentFactory(LayoutMainComponent);
+    layout.appLayout.createComponent(main);
   }
 }
 

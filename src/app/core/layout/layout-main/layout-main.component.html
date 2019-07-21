@@ -1,0 +1,44 @@
+<app-toolbar (menuClick)="onMenuClick($event)"></app-toolbar>
+
+<mat-sidenav-container>
+    <mat-sidenav #settings position="end"  (closedStart)="onCloseSettings()">
+        <mat-list>
+            <mat-list-item>Item 1</mat-list-item>
+            <mat-list-item>Item 2</mat-list-item>
+            <mat-list-item>Item 3</mat-list-item>
+            <mat-list-item>Item 4</mat-list-item>
+            <mat-list-item> 5</mat-list-item>
+        </mat-list>
+        <div class="settings-container">
+            <div class="settings-content">
+                <router-outlet name="settings"></router-outlet>
+            </div>
+
+        </div>
+
+    </mat-sidenav>
+
+    <mat-sidenav #sidenav position="start" (closedStart)="onCloseSideNav()">
+        <mat-list>
+            <a mat-list-item routerLink='/core/admin'>Admin</a>
+            <hr/>
+            <a mat-list-item [routerLink]="[{ outlets: { settings: ['landing'] } }]">Landing</a>
+            <hr/>
+
+            <a mat-list-item [routerLink]="['/trader/live-trader']" queryParamsHandling="preserve">Trader</a>
+            &nbsp;&nbsp;
+
+            <a mat-list-item routerLink='/scanner'>Scanner</a>
+
+            <a mat-list-item routerLink='/my-exchange/balances/'>Balances</a>
+            <hr/>
+            <a mat-list-item routerLink='/login/register'>Register</a>
+        </mat-list>
+    </mat-sidenav>
+
+
+    <div class="main-content">
+        <router-outlet></router-outlet>
+    </div>
+
+</mat-sidenav-container>

@@ -15,7 +15,6 @@ import {CommonModule} from '@angular/common';
 import {RouterModule} from '@angular/router';
 import {MaterialModule} from '@app/material/material.module';
 import {MatButtonModule, MatSidenavModule} from '@angular/material';
-import {HeaderModule} from '@app/core/header/header.module';
 import {is_mobile, IS_MOBILE} from '@app/core/is-mobile';
 
 

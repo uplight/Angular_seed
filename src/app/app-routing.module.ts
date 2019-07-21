@@ -7,8 +7,7 @@ import {PageNotFoundComponent} from '@app/landing/page-not-found/page-not-found.
 const appRoutes: Routes = [
   {
     path: 'landing',
-    component: LandingPage,
-    outlet: 'settings'
+    component: LandingPage
   },
   {
     path: '',

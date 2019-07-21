@@ -1,20 +1,22 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  selector: 'app-toolbar',
+  templateUrl: './toolbar.component.html',
+  styleUrls: ['./toolbar.component.css']
 })
-export class HeaderComponent implements OnInit {
+export class ToolbarComponent implements OnInit {
 
   @Output() menuClick: EventEmitter<string> = new EventEmitter();
-  constructor() { }
+  constructor(
+
+  ) { }
 
   ngOnInit() {
     console.log(' HeaderComponent  init ');
   }
 
-  onFirstClick($event: MouseEvent) {
+  onMenuClick($event: MouseEvent) {
     this.menuClick.emit('menu');
   }
 
