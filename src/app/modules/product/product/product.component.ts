@@ -20,6 +20,7 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
 })
 export class ProductComponent implements OnInit {
 
+  state = 'default';
   product: VOProduct;
   constructor(
     private route: ActivatedRoute,
@@ -37,4 +38,8 @@ export class ProductComponent implements OnInit {
 
   }
 
+  onRefreshClick() {
+    this.state = 'rotated';
+
+  }
 }
