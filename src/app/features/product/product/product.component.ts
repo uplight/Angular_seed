@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
-import {ProductService} from '@product/services/product.service';
 import {VOProduct} from '@app/core/models/products';
 import {animate, state, style, transition, trigger} from '@angular/animations';
+import {ProductService} from '@app/features/product/services/product.service';
 
 @Component({
   selector: 'app-product',
