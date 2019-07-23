@@ -8,7 +8,7 @@ import {metaReducers, reducers} from '@app/core/reducers';
 import {StoreDevtoolsModule} from '@ngrx/store-devtools';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
-import {AuthInterceptor} from '@app/modules/auth/auth-interceptor';
+import {AuthInterceptor} from '@app/features/auth/auth-interceptor';
 import {AppRoutingModule} from '@app/app-routing.module';
 
 import {CommonModule} from '@angular/common';
@@ -16,7 +16,9 @@ import {RouterModule} from '@angular/router';
 import {MaterialModule} from '@app/material/material.module';
 import {MatButtonModule, MatSidenavModule} from '@angular/material';
 import {is_mobile, IS_MOBILE} from '@app/core/is-mobile';
-
+import {environment} from '../environments/environment';
+import {RouterState, StoreRouterConnectingModule} from '@ngrx/router-store';
+import {EntityDataModule} from '@ngrx/data';
 
 
 @NgModule({
@@ -29,9 +31,24 @@ import {is_mobile, IS_MOBILE} from '@app/core/is-mobile';
     BrowserAnimationsModule,
     HttpClientModule,
     AppRoutingModule,
-    StoreModule.forRoot(reducers, {metaReducers}),
-    StoreDevtoolsModule.instrument(),
-    EffectsModule.forRoot([])
+    StoreModule.forRoot(reducers, {
+      runtimeChecks: {
+        strictStateImmutability: true,
+        strictActionImmutability: true,
+        strictActionSerializability: true,
+        strictStateSerializability: true
+      }
+    }),
+    StoreDevtoolsModule.instrument({
+      maxAge: 25,
+      logOnly: environment.production,
+    }),
+    StoreRouterConnectingModule.forRoot({
+      stateKey: 'router',
+      routerState: RouterState.Minimal,
+    }),
+    EffectsModule.forRoot([]),
+    EntityDataModule.forRoot({})
     /*   BrowserModule,
        BrowserAnimationsModule,
        AppRoutingModule,

@@ -7,7 +7,7 @@ import {CommonModule} from '@angular/common';
 import {MaterialModule} from '@app/material/material.module';
 import {PipesModule} from '@app/com/pipes/pipes.module';
 import {DirectivesModule} from '@app/com/directives/directives.module';
-import {AuthGuard} from '@app/modules/auth/auth.guard';
+import {AuthGuard} from '@app/features/auth/auth.guard';
 import { CoreEntryComponent } from './core-entry/core-entry.component';
 
 import {SettingsModule} from '@app/core/layout/settings/settings.module';
@@ -16,9 +16,9 @@ import {MatButtonModule} from '@angular/material';
 import {LayoutService} from '@app/core/layout/layout.service';
 import {LayoutMainComponent} from '@app/core/layout/layout-main/layout-main.component';
 import {LayoutModule} from '@app/core/layout/layout.module';
-import {AdminEntryComponent} from '@app/modules/admin/admin-entry/admin-entry.component';
-import {AdminModule} from '@app/modules/admin/admin.module';
-import {ProductModule} from '@product/product.module';
+import {AdminEntryComponent} from '@app/features/admin/admin-entry/admin-entry.component';
+import {AdminModule} from '@app/features/admin/admin.module';
+
 
 export const appRoutes: Routes = [
   {
@@ -54,7 +54,6 @@ export const appRoutes: Routes = [
     SettingsModule,
     LayoutModule,
     AdminModule,
-    ProductModule
   ],
   exports: [
     MaterialModule,
