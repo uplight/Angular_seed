@@ -1,0 +1,16 @@
+.app-tree-node {
+  display: flex;
+  align-items: center;
+}
+
+
+.my-border {
+    display: table-cell;
+    width: 6px;
+    min-height: 48px;
+    margin: 0 10px 0 10px;
+}
+
+.complete {
+    background-color: #2e7d32;
+}

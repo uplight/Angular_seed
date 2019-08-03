@@ -1,0 +1,56 @@
+{
+  "payload": {
+    "nav": [
+      {
+        "name": "Fruit",
+        "children": [
+          {
+            "name": "Apple",
+            "complete": true
+          },
+          {
+            "name": "Banana",
+            "complete": true
+          },
+          {
+            "name": "Fruit loops",
+            "complete": true
+          }
+        ]
+      },
+      {
+        "name": "Vegetables",
+        "children": [
+          {
+            "name": "Green",
+            "children": [
+              {
+                "name": "Broccoli",
+                "complete": false
+              },
+              {
+                "name": "Brussel sprouts",
+                "complete": true
+              }
+            ]
+          }, {
+            "name": "Orange",
+            "complete": false,
+            "children": [
+              {
+                "name": "Pumpkins",
+                "complete": false
+              },
+              {
+                "name": "Carrots",
+                "complete": false
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+
+}
+

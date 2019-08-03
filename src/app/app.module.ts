@@ -31,24 +31,34 @@ import {EntityDataModule} from '@ngrx/data';
     BrowserAnimationsModule,
     HttpClientModule,
     AppRoutingModule,
-    StoreModule.forRoot(reducers, {
+
+   /* StoreModule.forRoot(reducers, {
       runtimeChecks: {
         strictStateImmutability: true,
         strictActionImmutability: true,
         strictActionSerializability: true,
         strictStateSerializability: true
       }
-    }),
+    }),*/
+   /* StoreRouterConnectingModule.forRoot({
+      stateKey: 'router',
+      routerState: RouterState.Minimal,
+    }),*/
+    // EffectsModule.forRoot([]),
+   // EntityDataModule.forRoot({})
+    /*
     StoreDevtoolsModule.instrument({
       maxAge: 25,
       logOnly: environment.production,
     }),
+
     StoreRouterConnectingModule.forRoot({
       stateKey: 'router',
       routerState: RouterState.Minimal,
     }),
+
     EffectsModule.forRoot([]),
-    EntityDataModule.forRoot({})
+    EntityDataModule.forRoot({})*/
     /*   BrowserModule,
        BrowserAnimationsModule,
        AppRoutingModule,

@@ -8,17 +8,15 @@ import {
   MatIconModule, MatListModule,
   MatRadioModule,
   MatSelectModule,
-  MatSidenavModule, MatToolbarModule
+  MatSidenavModule, MatToolbarModule, MatTreeModule
 } from '@angular/material';
-import {ProfileFormComponent} from '@app/material/profile-form/profile-form.component';
+
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
   exports: [
     MatCheckboxModule,
     MatCardModule,
-    ProfileFormComponent,
     MatFormFieldModule,
     MatSelectModule,
     MatRadioModule,
@@ -29,12 +27,10 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     MatListModule,
     MatDialogModule,
     MatButtonModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatTreeModule
   ],
 
-  declarations: [
-    ProfileFormComponent
-  ],
   imports: [
     CommonModule,
     FormsModule,
@@ -49,7 +45,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     MatListModule,
     MatDialogModule,
     MatButtonModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatTreeModule
   ]
 })
-export class MaterialModule { }
+export class MaterialMatModule { }

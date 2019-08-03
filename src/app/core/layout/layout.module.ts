@@ -3,7 +3,11 @@ import { CommonModule } from '@angular/common';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { LayoutMainComponent } from './layout-main/layout-main.component';
 import {RouterModule} from '@angular/router';
-import {MaterialModule} from '@app/material/material.module';
+
+import {NavModule} from '@app/core/layout/nav/nav.module';
+import {MaterialAppModule} from '@app/material/material-app.module';
+import {MaterialMatModule} from '@app/material/material-mat.module';
+import {MaterialSdkModule} from '@app/material/material-sdk.module';
 
 
 @NgModule({
@@ -16,7 +20,10 @@ import {MaterialModule} from '@app/material/material.module';
   imports: [
     CommonModule,
     RouterModule,
-    MaterialModule
+   MaterialAppModule,
+    MaterialMatModule,
+    MaterialSdkModule,
+    NavModule
   ]
 })
 export class LayoutModule { }

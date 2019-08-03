@@ -18,16 +18,8 @@
     </mat-sidenav>
 
     <mat-sidenav #sidenav position="start" (closedStart)="onCloseSideNav()">
-        <mat-list>
-            <a mat-list-item routerLink='/admin'>Admin</a>
-            <hr/>
-            <a mat-list-item [routerLink]="['/landing']" queryParamsHandling="preserve">Landing</a>
-            &nbsp;&nbsp;
-            <a mat-list-item routerLink='/scanner'>Scanner</a>
-            <a mat-list-item routerLink='/my-exchange/balances/'>Balances</a>
-            <hr/>
-            <a mat-list-item routerLink='/login/register'>Register</a>
-        </mat-list>
+        <app-nav-tree>
+        </app-nav-tree>
     </mat-sidenav>
 
 
