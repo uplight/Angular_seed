@@ -12,9 +12,9 @@ const appRoutes: Routes = [
     component: LandingPageComponent
   },
   {
-    path: '',
-    loadChildren: () => import('./core/core.module').then(mod => mod.CoreModule),
-    data: {preload: true}
+    path: 'quest',
+    loadChildren: () => import('./lazy/questions/questions.module').then(mod => mod.QuestionsModule),
+
   },
   {path: '**', component: PageNotFoundComponent}
 ];
