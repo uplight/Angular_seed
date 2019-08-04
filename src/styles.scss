@@ -35,6 +35,10 @@ body {
   flex: 1 1 auto;
 }
 
+.main-content {
+  min-height: 500px;
+}
+
 .app-toolbar {
   position: sticky;
   position: -webkit-sticky; /* For macOS/iOS Safari */

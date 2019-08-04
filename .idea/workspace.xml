@@ -2,10 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a4d87f06-d532-408e-b7dc-fd9a92bd8862" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/app/core/layout/landing-page/landing-page.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/core/layout/landing-page/landing-page.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/core/layout/page-not-found/page-not-found.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/routing/routing.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/core/core.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/core.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/core/layout/layout-main/layout-main.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/layout/landing-page/landing-page.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/core/layout/layout-main/layout-main.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/core/layout/layout-main/layout-main.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/layout/landing-page/landing-page.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/core/layout/layout-main/layout-main.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/core/layout/layout.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/layout/layout.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/core/layout/layout.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/features/admin/admin.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/admin/admin.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/features/product/product.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/product/product.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/landing/landing/landing.page.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/landing/landing/landing.page.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/landing/page-not-found/page-not-found.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/layout/page-not-found/page-not-found.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/landing/page-not-found/page-not-found.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/landing/page-not-found/page-not-found.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/layout/page-not-found/page-not-found.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/landing/page-not-found/page-not-found.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/layout/page-not-found/page-not-found.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/landing/selective-preloading-strategy.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routing/selective-preloading-strategy.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/ui/ui.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/ui/ui.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/widgets/widgets.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/widgets/widgets.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,18 +45,18 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="ang8-1" />
+        <entry key="$PROJECT_DIR$" value="optim1" />
       </map>
     </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1Ovbkp8vcEeap2dMKcLoYrg0v3S" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/app/core" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/app/core/layout" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -45,19 +69,19 @@
     <property name="ts.external.directory.path" value="D:\Projects\Angular\Angular_seed\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Projects\Angular\Angular_seed\src\app\core" />
-      <recent name="D:\Projects\Angular\Angular_seed\src\app\core\services\apis" />
-      <recent name="D:\Projects\Angular\Angular_seed\src\app\material" />
-      <recent name="D:\Projects\Angular\Angular_seed\src\assets" />
-      <recent name="D:\Projects\Angular\Angular_seed\src\app\core\layout" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Projects\Angular\Angular_seed\src\app" />
       <recent name="D:\Projects\Angular\Angular_seed\src\app\features\auth" />
       <recent name="D:\Projects\Angular\Angular_seed\src\app\ui" />
       <recent name="D:\Projects\Angular\Angular_seed\src\app\core\layout" />
       <recent name="D:\Projects\Angular\Angular_seed\src\app\modules" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Projects\Angular\Angular_seed\src\app\core\layout" />
+      <recent name="D:\Projects\Angular\Angular_seed\src\app" />
+      <recent name="D:\Projects\Angular\Angular_seed\src\app\core" />
+      <recent name="D:\Projects\Angular\Angular_seed\src\app\core\services\apis" />
+      <recent name="D:\Projects\Angular\Angular_seed\src\app\material" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -180,7 +204,7 @@
       <workItem from="1563837614303" duration="4884000" />
       <workItem from="1563922847764" duration="2469000" />
       <workItem from="1564861166617" duration="1052000" />
-      <workItem from="1564883114046" duration="205000" />
+      <workItem from="1564883114046" duration="1826000" />
     </task>
     <task id="LOCAL-00005" summary="build">
       <created>1562768081938</created>
@@ -315,7 +339,14 @@
       <option name="project" value="LOCAL" />
       <updated>1564862044352</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="navigation tree">
+      <created>1564883342618</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1564883342618</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

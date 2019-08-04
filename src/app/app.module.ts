@@ -19,6 +19,13 @@ import {is_mobile, IS_MOBILE} from '@app/core/is-mobile';
 import {environment} from '../environments/environment';
 import {RouterState, StoreRouterConnectingModule} from '@ngrx/router-store';
 import {EntityDataModule} from '@ngrx/data';
+import {MaterialAppModule} from '@app/material/material-app.module';
+import {MaterialSdkModule} from '@app/material/material-sdk.module';
+import {MaterialMatModule} from '@app/material/material-mat.module';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {CoreModule} from '@app/core/core.module';
+import {NavModule} from '@app/core/layout/nav/nav.module';
+import {LayoutModule} from '@app/core/layout/layout.module';
 
 
 @NgModule({
@@ -26,11 +33,17 @@ import {EntityDataModule} from '@ngrx/data';
     AppComponent,
   ],
   imports: [
-    CommonModule,
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    RouterModule,
+    FormsModule,
+    MaterialAppModule,
+    MaterialMatModule,
+    ReactiveFormsModule,
+    CoreModule,
     AppRoutingModule,
+    LayoutModule
 
    /* StoreModule.forRoot(reducers, {
       runtimeChecks: {

@@ -1,52 +1,83 @@
 import {AfterViewInit, Component, Inject, ViewChild, ViewContainerRef} from '@angular/core';
 
 import {RouteConfigLoadEnd, Router} from '@angular/router';
-import {LayoutService} from '@app/core/layout/layout.service';
+import {MatSidenavContainer} from '@angular/material';
 
 @Component({
     selector: 'app-component',
     templateUrl: './app.component.html'
 })
 export class AppComponent implements AfterViewInit {
-  title = 'app works!';
+  @ViewChild('sidenav', {static: true}) sidenavContainer: MatSidenavContainer;
+  @ViewChild('settings', {static: true}) settingsContainer: MatSidenavContainer;
+  isSideNav: boolean;
+  isSettings: boolean;
 
-
-  @ViewChild('appLayout', {
-    read: ViewContainerRef,
-    static: true,
-  }) appLayout: ViewContainerRef;
-
-
-  isMenu: any;
-  imageClass: any;
-  bgColor: any;
-
-  constructor(
-    private router: Router,
-    private layoutService: LayoutService
-
-
-  ) {
-
-   const sub =  router.events.subscribe(evt => {
-     if (evt instanceof RouteConfigLoadEnd) {
-       console.log(' preloading end ');
-       sub.unsubscribe();
-       // this.router.navigateByUrl('/core')
-     }
-   })
-  }
-
-  ngAfterViewInit(): void {
-    this.layoutService.appLayout = this.appLayout
+  constructor() {
 
   }
 
-  onClearStorage() {
+
+  ngAfterViewInit() {
+    console.log(this.sidenavContainer);
+
+    // this.sidenavContainer.scrollable.elementScrolled().subscribe(() => /* react to scrolling */);
+  }
+
+  openSideNav() {
+    this.isSideNav = true;
+    this.sidenavContainer.open();
+  }
+
+  closeSidenav() {
+    this.isSideNav = false;
+    this.sidenavContainer.close();
+  }
+
+  openSettings() {
+    this.isSettings = true;
+    this.settingsContainer.open();
+  }
+
+  closeSettings() {
+    this.isSettings = false;
+    this.settingsContainer.close();
+  }
+
+  toggleSideNav() {
+    if (this.isSettings) { this.closeSettings() }
+    if (this.isSideNav) {
+      this.closeSidenav();
+    } else {
+      this.openSideNav()
+    }
+  }
+
+  toggleSettings() {
+    if (this.isSideNav) { this.closeSidenav() }
+    if (this.isSettings) {
+      this.closeSettings();
+    } else {
+      this.openSettings()
+    }
+  }
+
+  onCloseSettings() {
+    this.isSettings = false;
 
   }
 
-  onDogClick() {
+  onCloseSideNav() {
+    this.isSideNav = false;
   }
 
+  onMenuClick(evt: string) {
+
+    switch (evt) {
+      case 'menu':
+        return this.toggleSideNav();
+      case 'settings':
+        return this.toggleSettings();
+    }
+  }
 }

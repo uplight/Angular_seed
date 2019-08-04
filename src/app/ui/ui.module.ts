@@ -7,9 +7,11 @@ import {ProductImageComponent} from '@app/ui/product-image/product-image.compone
 import {ProductPromoComponent} from '@app/ui/product-promo/product-promo.component';
 import {ProductPurchaseComponent} from '@app/ui/product-purchase/product-purchase.component';
 import {ProductInfoComponent} from '@app/ui/product-info/product-info.component';
-import {MaterialModule} from '@app/material/material.module';
 import {PipesModule} from '@app/com/pipes/pipes.module';
 import {DirectivesModule} from '@app/com/directives/directives.module';
+import {MaterialMatModule} from '@app/material/material-mat.module';
+import {MaterialSdkModule} from '@app/material/material-sdk.module';
+import {MaterialAppModule} from '@app/material/material-app.module';
 
 @NgModule({
   exports: [
@@ -28,7 +30,9 @@ import {DirectivesModule} from '@app/com/directives/directives.module';
   ],
   imports: [
     CommonModule,
-    MaterialModule,
+   MaterialMatModule,
+    MaterialSdkModule,
+    MaterialAppModule,
     PipesModule,
     DirectivesModule
   ]

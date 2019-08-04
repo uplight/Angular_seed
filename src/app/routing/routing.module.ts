@@ -1,10 +1,8 @@
-import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
-import {PageNotFoundComponent} from '@app/core/layout/page-not-found/page-not-found.component';
+import {NgModule} from '@angular/core';
 import {SelectivePreloadingStrategyService} from '@app/routing/selective-preloading-strategy.service';
 import {LandingPageComponent} from '@app/core/layout/landing-page/landing-page.component';
-import {LayoutModule} from '@app/core/layout/layout.module';
-
+import {PageNotFoundComponent} from '@app/core/layout/page-not-found/page-not-found.component';
 
 const appRoutes: Routes = [
   {
@@ -12,16 +10,19 @@ const appRoutes: Routes = [
     component: LandingPageComponent
   },
   {
+    path: '', redirectTo: '/landing', pathMatch: 'full'
+  },
+ /* {
     path: '',
     loadChildren: () => import('./core/core.module').then(mod => mod.CoreModule),
     data: {preload: true}
-  },
+
+  },*/
   {path: '**', component: PageNotFoundComponent}
 ];
 
 @NgModule({
   imports: [
-    LayoutModule,
     RouterModule.forRoot(
       appRoutes,
       {
@@ -33,7 +34,9 @@ const appRoutes: Routes = [
   exports: [
     RouterModule
   ],
+  declarations: [
 
+  ]
 })
 
 export class AppRoutingModule {
