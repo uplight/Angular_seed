@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a4d87f06-d532-408e-b7dc-fd9a92bd8862" name="Default Changelist" comment="" />
+    <list default="true" id="a4d87f06-d532-408e-b7dc-fd9a92bd8862" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/core/core.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/core.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/features/product/product.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/product/product.module.ts" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,12 +27,6 @@
         <entry key="$PROJECT_DIR$" value="ang8-1" />
       </map>
     </option>
-  </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-1408" />
-    <option name="y" value="208" />
-    <option name="width" value="1380" />
-    <option name="height" value="1383" />
   </component>
   <component name="ProjectId" id="1Ovbkp8vcEeap2dMKcLoYrg0v3S" />
   <component name="PropertiesComponent">
@@ -125,8 +124,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.prod" />
         <item itemvalue="npm.start-server" />
+        <item itemvalue="npm.prod" />
         <item itemvalue="npm.mock-server" />
         <item itemvalue="npm.prod" />
         <item itemvalue="npm.start-server" />
@@ -180,7 +179,8 @@
       <workItem from="1563828917133" duration="1686000" />
       <workItem from="1563837614303" duration="4884000" />
       <workItem from="1563922847764" duration="2469000" />
-      <workItem from="1564861166617" duration="869000" />
+      <workItem from="1564861166617" duration="1052000" />
+      <workItem from="1564883114046" duration="205000" />
     </task>
     <task id="LOCAL-00005" summary="build">
       <created>1562768081938</created>
@@ -308,7 +308,14 @@
       <option name="project" value="LOCAL" />
       <updated>1564861995133</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="navigation tree">
+      <created>1564862044352</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1564862044352</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -319,7 +326,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

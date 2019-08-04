@@ -13,7 +13,7 @@ import {AppRoutingModule} from '@app/app-routing.module';
 
 import {CommonModule} from '@angular/common';
 import {RouterModule} from '@angular/router';
-import {MaterialModule} from '@app/material/material.module';
+
 import {MatButtonModule, MatSidenavModule} from '@angular/material';
 import {is_mobile, IS_MOBILE} from '@app/core/is-mobile';
 import {environment} from '../environments/environment';
