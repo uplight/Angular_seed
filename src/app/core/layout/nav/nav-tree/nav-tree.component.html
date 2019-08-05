@@ -1,8 +1,8 @@
 <div>
-    <mat-tab-group [selectedIndex]="tabLevel" class="navigation">
+    <mat-tab-group [selectedIndex]="tabLevel" class="navigation" dynamicHeight>
         <mat-tab>
+            <div class="nav-content">
             <cdk-tree [dataSource]="dataSource" [treeControl]="treeControl">
-
                 <cdk-tree-node *cdkTreeNodeDef="let node" [cdkTreeNodePadding]=0.2
                                [style.display]="'flex'"
                                class="app-tree-node app-tree-leaf">
@@ -24,9 +24,37 @@
                     <a (click)="onLeafClick(node)">{{node.label}}</a>
                 </cdk-tree-node>
             </cdk-tree>
+            </div>
         </mat-tab>
+
         <mat-tab>
-            <a (click)="onBackClick()">Back</a>
+            <div class="nav-content">
+            <a (click)="onBackClick()"><mat-icon>keyboard_backspace</mat-icon></a>
+                <div class="mat-tab-header">{{subTopic}}</div>
+                <br/>
+            <cdk-tree [dataSource]="dataSource2" [treeControl]="treeControl">
+                <cdk-tree-node *cdkTreeNodeDef="let node" [cdkTreeNodePadding]=0.2
+                               [style.display]="'flex'"
+                               class="app-tree-node app-tree-leaf">
+                    <div class="my-border {{node.complete?'complete':''}}"></div>
+                    <a (click)="onLeafClick(node)">{{node.label}}</a>
+                </cdk-tree-node>
+
+                <cdk-tree-node *cdkTreeNodeDef="let node; when: hasChildren"
+                               [style.display]="'flex'"
+                               class="app-tree-node level-{{node.level}}">
+                    <button mat-icon-button cdkTreeNodeToggle
+                            [color]="node.complete ? 'accent' : ''"
+                            (click)="node.isExpanded = !node.isExpanded"
+                            [style.visibility]="node.expandable ? 'visible' : 'hidden'">
+                        <mat-icon class="mat-icon-rtl-mirror">
+                            {{getIcon(node)}}
+                        </mat-icon>
+                    </button>
+                    <a (click)="onLeafClick(node)">{{node.label}}</a>
+                </cdk-tree-node>
+            </cdk-tree>
+            </div>
         </mat-tab>
     </mat-tab-group>
 </div>

@@ -38,22 +38,21 @@
                 "complete": true
               },
               {
-                "id":"personalInfo",
+                "id":"personalIncome",
+                "label": "Income",
                 "children": [
                   {
                     "id": "work",
                     "label": "Work Place"
                   },
                   {
-                    "id": "income",
+                    "id": "Other income",
                     "label": "Income"
                   }
                 ]
 
               }
             ]
-
-
           },
           {
             "label": "Orange",

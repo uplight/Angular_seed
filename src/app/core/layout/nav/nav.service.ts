@@ -59,7 +59,8 @@ export class NavService {
       expandable,
       label,
       level,
-      complete
+      complete,
+      path
     };
   };
 
@@ -83,6 +84,9 @@ export class NavService {
 
   dataSource: MatTreeFlatDataSource<NavJson, any> = new MatTreeFlatDataSource(this.treeControl, this.treeFlattener);
 
+  dataSource2: MatTreeFlatDataSource<NavJson, any> = new MatTreeFlatDataSource(this.treeControl, this.treeFlattener);
+
+  paths: {[path: string]: NavJson[]} = {};
 
 
   hasChildren = (index: number, node: NavFlatNode): boolean => {
@@ -98,19 +102,31 @@ export class NavService {
     this.nav$ = this.config.config$.pipe(map(cfg => cfg.nav));
     this.nav$.subscribe(nav => {
       console.log(nav);
-      nav.forEach(item => NavService.nextPath(item, null));
+      nav.forEach(item => NavService.nextPath(item, null, this.paths));
+
+
       this.dataSource.data = nav;
     })
   }
 
- static nextPath(node: NavJson, path: string) {
+ static nextPath(node: NavJson, path: string, second: any) {
     if (!node.id) { node.id = node.label }
     node.path = path ? path + '.' + node.id : node.id;
     if (node.children) {
       node.children.forEach((item) => {
-        NavService.nextPath(item, node.path)
-      })
+        NavService.nextPath(item, node.path, second)
+      });
+      if (node.nextTab) {
+        second[ node.path] = node.children;
+        node.children = null;
+      }
     }
+  }
+
+  setSecond(path: string) {
+    const navs = this.paths[path];
+    if (navs) {  this.dataSource2.data = navs; }
+    return navs
   }
 
 
