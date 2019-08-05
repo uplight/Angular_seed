@@ -27,7 +27,9 @@ $candy-app-theme: mat-light-theme($candy-app-primary, $candy-app-accent, $candy-
 .navigation > .mat-tab-header{
   display: none;
 }
-
+.navigation .level-1{
+  padding-left:8px;
+}
 body {
   margin: 0;
 }

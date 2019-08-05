@@ -2,17 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a4d87f06-d532-408e-b7dc-fd9a92bd8862" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/core/layout/nav/nav-tree/nav-tree.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/layout/nav/nav-tree/nav-tree.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/core/layout/nav/nav-tree/nav-tree.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/layout/nav/nav-tree/nav-tree.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/core/layout/nav/nav-tree/nav-tree.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/layout/nav/nav-tree/nav-tree.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/core/layout/nav/nav.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/layout/nav/nav.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/core/layout/nav/nav.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/layout/nav/nav.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/lazy/questions/questions.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/lazy/questions/questions.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/material/material-mat.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/material/material-mat.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/material/material-sdk.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/material/material-sdk.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/mocks/app-config.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/mocks/app-config.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles.scss" afterDir="false" />
     </list>
@@ -189,7 +184,7 @@
       <workItem from="1563837614303" duration="4884000" />
       <workItem from="1563922847764" duration="2469000" />
       <workItem from="1564861166617" duration="1052000" />
-      <workItem from="1564883114046" duration="20971000" />
+      <workItem from="1564883114046" duration="29949000" />
     </task>
     <task id="LOCAL-00005" summary="build">
       <created>1562768081938</created>
@@ -345,7 +340,14 @@
       <option name="project" value="LOCAL" />
       <updated>1564886457172</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="questions models">
+      <created>1564967038430</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1564967038430</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -385,6 +387,7 @@
     <MESSAGE value="auth2" />
     <MESSAGE value="navigation tree" />
     <MESSAGE value="quest pages" />
-    <option name="LAST_COMMIT_MESSAGE" value="quest pages" />
+    <MESSAGE value="questions models" />
+    <option name="LAST_COMMIT_MESSAGE" value="questions models" />
   </component>
 </project>

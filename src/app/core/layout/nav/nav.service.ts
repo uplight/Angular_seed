@@ -15,34 +15,41 @@ export class NavTreeNode {
 
 export interface NavJson {
   id: string;
-  name: string;
+  label: string;
   complete: boolean;
+  nextTab: boolean;
+  path: string;
   children?: NavJson[];
 }
 
 
 export interface NavFlatNode {
   expandable: boolean;
-  name: string;
+  label: string;
   complete: boolean;
   level: number;
+  nextTab: boolean;
+  path: string;
   isExpanded?: boolean;
 }
 
 @Injectable()
 export class NavService {
 
-  treeControl: FlatTreeControl<NavFlatNode> = new FlatTreeControl<NavFlatNode>(
-    node => node.level, node => node.expandable);
+
 
   recursive = false;
-  levels = new Map<NavTreeNode, number>();
+  // levels = new Map<NavFlatNode, number>();
 
   nav$: Observable<NavJson[]>;
-  private path: {[path: string]: number};
+ // private path: {[path: string]: number};
 
   private _transformer = (node: NavJson, level: number) => {
-    const name: string = node.name;
+    const label: string = node.label;
+    const id = node.id;
+    const nextTab = node.nextTab;
+    const path = node.path;
+
     const expandable = !!node.children && node.children.length > 0;
     const complete = expandable ? node.children.every(function (item) {
       return item.complete;
@@ -50,7 +57,7 @@ export class NavService {
 
     return {
       expandable,
-      name,
+      label,
       level,
       complete
     };
@@ -71,13 +78,16 @@ export class NavService {
   };
 
 
+  treeControl: FlatTreeControl<NavFlatNode> = new FlatTreeControl<NavFlatNode>(this.getLevel, this.isExpandable);
   treeFlattener = new MatTreeFlattener(this._transformer, this.getLevel, this.isExpandable, this.getChildren);
+
   dataSource: MatTreeFlatDataSource<NavJson, any> = new MatTreeFlatDataSource(this.treeControl, this.treeFlattener);
 
-  hasChild = (_: number, node: NavFlatNode) => node.expandable;
 
-  hasChildren = (index: number, node: NavTreeNode): boolean => {
-    return node.children.value.length > 0;
+
+  hasChildren = (index: number, node: NavFlatNode): boolean => {
+    return node.expandable;
+   // return node.children.value.length > 0;
   };
 
 
@@ -88,19 +98,27 @@ export class NavService {
     this.nav$ = this.config.config$.pipe(map(cfg => cfg.nav));
     this.nav$.subscribe(nav => {
       console.log(nav);
+      nav.forEach(item => NavService.nextPath(item, null));
       this.dataSource.data = nav;
     })
   }
 
+ static nextPath(node: NavJson, path: string) {
+    if (!node.id) { node.id = node.label }
+    node.path = path ? path + '.' + node.id : node.id;
+    if (node.children) {
+      node.children.forEach((item) => {
+        NavService.nextPath(item, node.path)
+      })
+    }
+  }
 
 
-
-
-  transformer = (node: NavTreeNode, level: number) => {
+ /* transformer = (node: NavFlatNode, level: number) => {
     this.levels.set(node, level);
     return node;
   }
-
+*/
 
   /*isOdd(node: NavTreeNode) {
     return this.getLevel(node) % 2 === 1;

@@ -17,7 +17,7 @@
 
     </mat-sidenav>
 
-    <mat-sidenav #sidenav position="start" (closedStart)="onCloseSideNav()">
+    <mat-sidenav #sidenav position="start" (closedStart)="onCloseSideNav()" [opened]="true">
         <app-nav-tree>
         </app-nav-tree>
     </mat-sidenav>

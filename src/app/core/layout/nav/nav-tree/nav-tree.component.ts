@@ -17,7 +17,7 @@ export class NavTreeComponent implements OnInit {
 
   dataSource: MatTreeFlatDataSource<NavJson, NavFlatNode>;
   treeControl: FlatTreeControl<NavFlatNode>;
-  hasChild: (i, node) => boolean;
+  hasChildren: (i, node) => boolean;
   tabLevel = 0;
 
   constructor(
@@ -26,7 +26,7 @@ export class NavTreeComponent implements OnInit {
 
     this.dataSource = navService.dataSource;
     this.treeControl = navService.treeControl;
-    this.hasChild = navService.hasChild;
+    this.hasChildren = navService.hasChildren;
   }
 
   ngOnInit(): void {

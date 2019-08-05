@@ -21,6 +21,8 @@ export class AppComponent implements AfterViewInit {
   ngAfterViewInit() {
     console.log(this.sidenavContainer);
 
+
+
     // this.sidenavContainer.scrollable.elementScrolled().subscribe(() => /* react to scrolling */);
   }
 

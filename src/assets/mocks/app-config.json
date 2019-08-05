@@ -2,53 +2,78 @@
   "payload": {
     "nav": [
       {
-        "name": "Eligibility",
+        "label": "Eligibility",
         "id": "Eligibility",
         "children": [
           {
             "id": "intro",
-            "name": "Intro",
+            "label": "Intro",
             "complete": true
           },
           {
             "id": "questions",
-            "name": "Base questions",
+            "label": "Base questions",
             "complete": true
           }
         ]
       },
       {
         "id": "appSetup",
-        "name": "Application Setup",
+        "label": "Application Setup",
         "children": [
           {
             "id": "intro",
-            "name": "Intro",
+            "label": "Intro",
             "complete": true
           },
           {
             "id": "coApplicant",
-            "name": "Co-applicant"
+            "label": "Co-applicant",
+            "nextTab": true,
+            "children": [
+              {
+                "id": "address",
+                "label": "Address",
+                "model": "VOAddress",
+                "complete": true
+              },
+              {
+                "id":"personalInfo",
+                "children": [
+                  {
+                    "id": "work",
+                    "label": "Work Place"
+                  },
+                  {
+                    "id": "income",
+                    "label": "Income"
+                  }
+                ]
+
+              }
+            ]
+
+
           },
           {
-            "name": "Orange",
+            "label": "Orange",
             "complete": false,
             "children":
             [
               {
-                "name": "Pumpkins",
+                "label": "Pumpkins",
                 "complete": false
               },
               {
-                "name": "Carrots",
+                "label": "Carrots",
                 "children":
                 [
                   {
-                    "name": "Broccoli",
+                    "label": "Broccoli",
                     "complete": false
                   },
                   {
-                    "name": "Brussel sprouts",
+                    "label": "Brussel sprouts",
                     "complete": true
                   }
                 ]
