@@ -29,8 +29,11 @@
 
         <mat-tab>
             <div class="nav-content">
-            <a (click)="onBackClick()"><mat-icon>keyboard_backspace</mat-icon></a>
-                <div class="mat-tab-header">{{subTopic}}</div>
+                <button mat-icon-button  (click)="onBackClick()">
+                    <mat-icon>keyboard_backspace</mat-icon>
+                </button>
+
+                <div class="mat-tab-header subtopic">{{subTopic}}</div>
                 <br/>
             <cdk-tree [dataSource]="dataSource2" [treeControl]="treeControl">
                 <cdk-tree-node *cdkTreeNodeDef="let node" [cdkTreeNodePadding]=0.2

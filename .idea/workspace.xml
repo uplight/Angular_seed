@@ -5,10 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/core/layout/nav/nav-tree/nav-tree.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/layout/nav/nav-tree/nav-tree.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/core/layout/nav/nav-tree/nav-tree.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/layout/nav/nav-tree/nav-tree.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/core/layout/nav/nav-tree/nav-tree.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/layout/nav/nav-tree/nav-tree.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/core/layout/nav/nav.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/layout/nav/nav.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/mocks/app-config.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/mocks/app-config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -183,7 +179,7 @@
       <workItem from="1563837614303" duration="4884000" />
       <workItem from="1563922847764" duration="2469000" />
       <workItem from="1564861166617" duration="1052000" />
-      <workItem from="1564883114046" duration="34512000" />
+      <workItem from="1564883114046" duration="34974000" />
     </task>
     <task id="LOCAL-00005" summary="build">
       <created>1562768081938</created>
@@ -353,7 +349,14 @@
       <option name="project" value="LOCAL" />
       <updated>1565016159663</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="navigation">
+      <created>1565020711856</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1565020711856</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -394,6 +397,7 @@
     <MESSAGE value="navigation tree" />
     <MESSAGE value="quest pages" />
     <MESSAGE value="questions models" />
-    <option name="LAST_COMMIT_MESSAGE" value="questions models" />
+    <MESSAGE value="navigation" />
+    <option name="LAST_COMMIT_MESSAGE" value="navigation" />
   </component>
 </project>
