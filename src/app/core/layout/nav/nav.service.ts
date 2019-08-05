@@ -14,6 +14,7 @@ export class NavTreeNode {
 
 
 export interface NavJson {
+  id: string;
   name: string;
   complete: boolean;
   children?: NavJson[];
@@ -38,62 +39,71 @@ export class NavService {
   levels = new Map<NavTreeNode, number>();
 
   nav$: Observable<NavJson[]>;
+  private path: {[path: string]: number};
 
   private _transformer = (node: NavJson, level: number) => {
-    const hasChild = !!node.children && node.children.length > 0;
-    const complete = hasChild ? node.children.every(function (item) {
+    const name: string = node.name;
+    const expandable = !!node.children && node.children.length > 0;
+    const complete = expandable ? node.children.every(function (item) {
       return item.complete;
     }) : node.complete;
 
     return {
-      expandable: hasChild,
-      name: node.name,
-      level: level,
+      expandable,
+      name,
+      level,
       complete
     };
   };
 
-  treeFlattener = new MatTreeFlattener(
-    this._transformer, node => node.level, node => node.expandable, node => node.children);
+  isExpandable = (node: NavFlatNode): boolean => {
+    return node.expandable
+   //  return node.children.value.length > 0;
+  };
 
+  getLevel = (node: NavFlatNode): number => {
+    return node.level;
+    // return this.levels.get(node) || 0;
+  };
+
+  getChildren = (node: NavJson) => {
+    return node.children;
+  };
+
+
+  treeFlattener = new MatTreeFlattener(this._transformer, this.getLevel, this.isExpandable, this.getChildren);
   dataSource: MatTreeFlatDataSource<NavJson, any> = new MatTreeFlatDataSource(this.treeControl, this.treeFlattener);
 
   hasChild = (_: number, node: NavFlatNode) => node.expandable;
 
+  hasChildren = (index: number, node: NavTreeNode): boolean => {
+    return node.children.value.length > 0;
+  };
+
+
   constructor(
     private config: ApiConfigService
   ) {
-    this.nav$ = this.config.config$.pipe(map(cfg => cfg.nav));
 
+    this.nav$ = this.config.config$.pipe(map(cfg => cfg.nav));
     this.nav$.subscribe(nav => {
       console.log(nav);
       this.dataSource.data = nav;
     })
   }
 
-  getLevel = (node: NavTreeNode): number => {
-    return this.levels.get(node) || 0;
-  };
 
-  isExpandable = (node: NavTreeNode): boolean => {
-    return node.children.value.length > 0;
-  };
 
-  getChildren = (node: NavTreeNode) => {
-    return node.children;
-  };
+
 
   transformer = (node: NavTreeNode, level: number) => {
     this.levels.set(node, level);
     return node;
   }
 
-  hasChildren = (index: number, node: NavTreeNode): boolean => {
-    return node.children.value.length > 0;
-  };
 
-  isOdd(node: NavTreeNode) {
+  /*isOdd(node: NavTreeNode) {
     return this.getLevel(node) % 2 === 1;
-  }
+  }*/
 
 }

@@ -8,7 +8,7 @@ import {
   MatIconModule, MatListModule,
   MatRadioModule,
   MatSelectModule,
-  MatSidenavModule, MatToolbarModule, MatTreeModule
+  MatSidenavModule, MatTableModule, MatTabsModule, MatToolbarModule, MatTreeModule
 } from '@angular/material';
 
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
@@ -28,7 +28,9 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     MatDialogModule,
     MatButtonModule,
     MatToolbarModule,
-    MatTreeModule
+    MatTreeModule,
+    MatTabsModule,
+    MatTableModule
   ],
 
   imports: [
@@ -46,7 +48,9 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     MatDialogModule,
     MatButtonModule,
     MatToolbarModule,
-    MatTreeModule
+    MatTreeModule,
+    MatTabsModule,
+    MatTableModule
   ]
 })
 export class MaterialMatModule { }

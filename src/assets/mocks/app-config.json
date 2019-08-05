@@ -2,54 +2,108 @@
   "payload": {
     "nav": [
       {
-        "name": "Fruit",
+        "name": "Eligibility",
+        "id": "Eligibility",
         "children": [
           {
-            "name": "Apple",
+            "id": "intro",
+            "name": "Intro",
             "complete": true
           },
           {
-            "name": "Banana",
-            "complete": true
-          },
-          {
-            "name": "Fruit loops",
+            "id": "questions",
+            "name": "Base questions",
             "complete": true
           }
         ]
       },
       {
-        "name": "Vegetables",
+        "id": "appSetup",
+        "name": "Application Setup",
         "children": [
           {
-            "name": "Green",
-            "children": [
-              {
-                "name": "Broccoli",
-                "complete": false
-              },
-              {
-                "name": "Brussel sprouts",
-                "complete": true
-              }
-            ]
-          }, {
+            "id": "intro",
+            "name": "Intro",
+            "complete": true
+          },
+          {
+            "id": "coApplicant",
+            "name": "Co-applicant"
+          },
+          {
             "name": "Orange",
             "complete": false,
-            "children": [
+            "children":
+            [
               {
                 "name": "Pumpkins",
                 "complete": false
               },
               {
                 "name": "Carrots",
-                "complete": false
+                "children":
+                [
+                  {
+                    "name": "Broccoli",
+                    "complete": false
+                  },
+                  {
+                    "name": "Brussel sprouts",
+                    "complete": true
+                  }
+                ]
               }
             ]
           }
         ]
+      },
+      {
+        "id": "address",
+        "model": "VOAddress"
       }
-    ]
+    ],
+    "library": {
+      "VOAddress": {
+
+      },
+      "Eligibility": {
+        "intro": {
+
+        },
+        "madeOffer": {
+
+          "select": {
+            "yes": {
+
+            },
+            "no": {
+
+            }
+          }
+
+        },
+        "propertyType": {
+          "select": {
+            "residential": {
+
+            },
+            "commercial": {
+
+            }
+          }
+        },
+        "over18": {
+          "select": {
+            "yes": {
+
+            },
+            "no": {
+
+            }
+          }
+        }
+      }
+    }
   }
 
 }

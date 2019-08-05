@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { NavTreeComponent } from './nav-tree/nav-tree.component';
 import {MaterialSdkModule} from '@app/material/material-sdk.module';
 import {MaterialMatModule} from '@app/material/material-mat.module';
+import {RouterModule} from '@angular/router';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import {MaterialMatModule} from '@app/material/material-mat.module';
   imports: [
     CommonModule,
     MaterialSdkModule,
-    MaterialMatModule
+    MaterialMatModule,
+    RouterModule
   ]
 })
 export class NavModule { }

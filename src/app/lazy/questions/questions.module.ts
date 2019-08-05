@@ -14,7 +14,11 @@ export const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [QuestEntryPageComponent, QuestPageComponent, QuestChildPageComponent],
+  declarations: [
+    QuestEntryPageComponent,
+    QuestPageComponent,
+    QuestChildPageComponent
+  ],
   imports: [
     CommonModule,
     RouterModule.forChild(routes)

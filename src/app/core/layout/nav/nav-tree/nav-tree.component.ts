@@ -1,14 +1,15 @@
-import { Component, OnInit } from '@angular/core';
-import {FlatTreeControl} from "@angular/cdk/tree";
-import {ArrayDataSource, DataSource} from "@angular/cdk/collections";
-import {NavFlatNode, NavJson, NavService} from "../nav.service";
+import {Component, OnInit} from '@angular/core';
+
+
 import {MatTreeFlatDataSource, MatTreeFlattener} from '@angular/material';
 import {BehaviorSubject} from 'rxjs';
+import {FlatTreeControl} from '@angular/cdk/tree';
+import {NavFlatNode, NavJson, NavService} from '@app/core/layout/nav/nav.service';
 
 @Component({
   selector: 'app-nav-tree',
   templateUrl: './nav-tree.component.html',
-  styleUrls: ['./nav-tree.component.css'],
+  styleUrls: ['./nav-tree.component.scss'],
   providers: [NavService]
 })
 
@@ -17,6 +18,8 @@ export class NavTreeComponent implements OnInit {
   dataSource: MatTreeFlatDataSource<NavJson, NavFlatNode>;
   treeControl: FlatTreeControl<NavFlatNode>;
   hasChild: (i, node) => boolean;
+  tabLevel = 0;
+
   constructor(
     private navService: NavService
   ) {
@@ -31,11 +34,34 @@ export class NavTreeComponent implements OnInit {
   }
 
   getIcon(node) {
-    if(node.expandable && node.complete) return 'done';
-   return  this.treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'
+    if (node.expandable && node.complete) {
+      return 'done';
+    }
+    return this.treeControl.isExpanded(node) ? 'expand_less' : 'chevron_right'
   }
 
   getClass(node: any) {
-    return node.complete?'border-green':'';
+    return node.complete ? 'border-green' : '';
+  }
+
+  onLeafClick(node: NavFlatNode) {
+      this.tabLevel = 1;
+    console.log(node);
+
+  }
+
+  onBackClick() {
+    this.tabLevel = 0
+  }
+
+
+  getParentNode(node) {
+
+    return null;
+  }
+
+  getStyle(node): string {
+    const parent = this.getParentNode(node);
+    return (!parent || parent.isExpanded) ? 'flex' : 'none';
   }
 }

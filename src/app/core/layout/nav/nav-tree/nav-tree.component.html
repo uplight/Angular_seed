@@ -1,40 +1,46 @@
-<mat-tree [dataSource]="dataSource" [treeControl]="treeControl">
-    <!-- This is the tree node template for leaf nodes -->
-    <mat-tree-node *matTreeNodeDef="let node" matTreeNodePadding>
-        <!-- use a disabled button to provide padding for tree leaf -->
-        <div class = "my-border {{node.complete?'complete':''}}"></div>
-        {{node.name}}
-    </mat-tree-node>
-    <!-- This is the tree node template for expandable nodes -->
-    <mat-tree-node *matTreeNodeDef="let node; when: hasChild" matTreeNodePadding>
-        <button mat-icon-button matTreeNodeToggle
-                [attr.aria-label]="'toggle ' + node.name" [color]="node.complete?'primary':''">
-            <mat-icon class = "mat-icon-rtl-mirror">
-                {{getIcon(node)}}
-            </mat-icon>
-        </button>
-        {{node.name}}
-    </mat-tree-node>
-</mat-tree>
-
 <!--
+<mat-tab-group [selectedIndex]="tabLevel" class="navigation">
+    <mat-tab>
+        <mat-tree [dataSource]="dataSource" [treeControl]="treeControl">
+            &lt;!&ndash; This is the tree node template for leaf nodes &ndash;&gt;
+            <mat-tree-node *matTreeNodeDef="let node" matTreeNodePadding = 0.3>
+                &lt;!&ndash; use a disabled button to provide padding for tree leaf &ndash;&gt;
+                <div class = "my-border {{node.complete?'complete':''}}"></div>
+                <a (click)="onNodeClick(node)"> {{node.name}}</a>
+            </mat-tree-node>
+            &lt;!&ndash; This is the tree node template for expandable nodes &ndash;&gt;
+            <mat-tree-node *matTreeNodeDef="let node; when: hasChild" matTreeNodePadding>
+                <button mat-icon-button matTreeNodeToggle
+                        [attr.aria-label]="'toggle ' + node.name" [color]="node.complete?'primary':''">
+                    <mat-icon class = "mat-icon-rtl-mirror">
+                        {{getIcon(node)}}
+                    </mat-icon>
+                </button>
+                {{node.name}}
+            </mat-tree-node>
+        </mat-tree>
+    </mat-tab>
+    <mat-tab>
+        <a (click)="onBackClick()">Back</a>
+    </mat-tab>
+
+</mat-tab-group>
+-->
+
 
 <cdk-tree [dataSource]="dataSource" [treeControl]="treeControl">
-  &lt;!&ndash; This is the tree node template for leaf nodes &ndash;&gt;
+
   <cdk-tree-node *cdkTreeNodeDef="let node" [cdkTreeNodePadding] = 0.2
-                 [style.display]="shouldRender(node) ? 'flex' : 'none'"
-                 class="app-tree-node">
-    &lt;!&ndash; use a disabled button to provide padding for tree leaf &ndash;&gt;
+                 [style.display]="'flex'"
+                 class="app-tree-node app-tree-leaf">
     <button mat-icon-button disabled></button>
-    {{node.name}}
+      <a (click)="onLeafClick(node)"> {{node.name}}</a>
   </cdk-tree-node>
 
-  &lt;!&ndash; This is the tree node template for expandable nodes &ndash;&gt;
   <cdk-tree-node *cdkTreeNodeDef="let node; when: hasChild" cdkTreeNodePadding
-                 [style.display]="shouldRender(node) ? 'flex' : 'none'"
+                 [style.display]="'flex'"
                  class="app-tree-node">
     <button mat-icon-button cdkTreeNodeToggle
-            [attr.aria-label]="'toggle ' + node.filename"
             (click)="node.isExpanded = !node.isExpanded"
             [style.visibility]="node.expandable ? 'visible' : 'hidden'">
       <mat-icon class="mat-icon-rtl-mirror">
@@ -43,4 +49,4 @@
     </button>
     {{node.name}}
   </cdk-tree-node>
-</cdk-tree>-->
+</cdk-tree>
