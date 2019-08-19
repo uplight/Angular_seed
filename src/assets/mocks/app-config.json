@@ -95,19 +95,16 @@
 
         },
         "madeOffer": {
-
           "select": {
-            "yes": {
-
-            },
-            "no": {
-
-            }
+            "type": "buttons2",
+            "yes":  "propertyType",
+            "no":""
           }
 
         },
         "propertyType": {
           "select": {
+            "type": "radio",
             "residential": {
 
             },
@@ -118,12 +115,8 @@
         },
         "over18": {
           "select": {
-            "yes": {
-
-            },
-            "no": {
-
-            }
+            "yes":"",
+            "no": ""
           }
         }
       }
