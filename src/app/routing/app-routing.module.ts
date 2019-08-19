@@ -1,8 +1,10 @@
-import {RouterModule, Routes} from '@angular/router';
 import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
+import {PageNotFoundComponent} from '@app/core/layout/page-not-found/page-not-found.component';
 import {SelectivePreloadingStrategyService} from '@app/routing/selective-preloading-strategy.service';
 import {LandingPageComponent} from '@app/core/layout/landing-page/landing-page.component';
-import {PageNotFoundComponent} from '@app/core/layout/page-not-found/page-not-found.component';
+import {LayoutModule} from '@app/core/layout/layout.module';
+
 
 const appRoutes: Routes = [
   {
@@ -10,19 +12,16 @@ const appRoutes: Routes = [
     component: LandingPageComponent
   },
   {
-    path: '', redirectTo: '/landing', pathMatch: 'full'
-  },
- /* {
-    path: '',
-    loadChildren: () => import('./core/core.module').then(mod => mod.CoreModule),
-    data: {preload: true}
+    path: 'quest',
+    loadChildren: () => import('../lazy/questions/questions.module').then(mod => mod.QuestionsModule),
 
-  },*/
+  },
   {path: '**', component: PageNotFoundComponent}
 ];
 
 @NgModule({
   imports: [
+    LayoutModule,
     RouterModule.forRoot(
       appRoutes,
       {
@@ -34,9 +33,7 @@ const appRoutes: Routes = [
   exports: [
     RouterModule
   ],
-  declarations: [
 
-  ]
 })
 
 export class AppRoutingModule {

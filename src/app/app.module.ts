@@ -9,7 +9,7 @@ import {StoreDevtoolsModule} from '@ngrx/store-devtools';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import {AuthInterceptor} from '@app/features/auth/auth-interceptor';
-import {AppRoutingModule} from '@app/app-routing.module';
+
 
 import {CommonModule} from '@angular/common';
 import {RouterModule} from '@angular/router';
@@ -26,6 +26,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {CoreModule} from '@app/core/core.module';
 import {NavModule} from '@app/core/layout/nav/nav.module';
 import {LayoutModule} from '@app/core/layout/layout.module';
+import {AppRoutingModule} from '@app/routing/app-routing.module';
 
 
 @NgModule({

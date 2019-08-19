@@ -2,9 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a4d87f06-d532-408e-b7dc-fd9a92bd8862" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/app/app-forms/address-form/address-form-data.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/app-forms/address-form/address-form.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/app-forms/address-form/address-form.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/app-forms/address-form/address-form.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/app-forms/address-form/address-form.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/app-forms/app-forms.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/lazy/questions/components-library.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/lazy/questions/iquestion-component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/lazy/questions/question-component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/lazy/questions/question-component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/lazy/questions/question-host.directive.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/lazy/questions/question-host.directive.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/lazy/questions/questions-library.service.spec.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/core/layout/nav/nav-tree/nav-tree.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/layout/nav/nav-tree/nav-tree.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/core/layout/nav/nav-tree/nav-tree.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/layout/nav/nav-tree/nav-tree.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routing/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/lazy/questions/quest-entry-page/quest-entry-page.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/lazy/questions/quest-entry-page/quest-entry-page.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/lazy/questions/quest-entry-page/quest-entry-page.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/lazy/questions/quest-entry-page/quest-entry-page.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/lazy/questions/questions.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/lazy/questions/questions.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/material/material-app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/material/material-app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/material/material-mat.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/material/material-mat.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/routing/routing.module.ts" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,7 +51,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/app/core/layout" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../questrade/questionnaire-library" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -45,11 +65,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Projects\Angular\Angular_seed\src\app\app-forms" />
+      <recent name="D:\Projects\Angular\Angular_seed\src\app\material" />
       <recent name="D:\Projects\Angular\Angular_seed\src\app" />
-      <recent name="D:\Projects\Angular\Angular_seed\src\app\features\auth" />
+      <recent name="D:\Projects\Angular\Angular_seed\src\app\ui\app-forms" />
       <recent name="D:\Projects\Angular\Angular_seed\src\app\ui" />
-      <recent name="D:\Projects\Angular\Angular_seed\src\app\core\layout" />
-      <recent name="D:\Projects\Angular\Angular_seed\src\app\modules" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Projects\Angular\Angular_seed\src\app\core\layout" />
@@ -111,6 +131,16 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="server" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="server" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="start-server" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -123,11 +153,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.server" />
         <item itemvalue="npm.start-server" />
         <item itemvalue="npm.prod" />
         <item itemvalue="npm.mock-server" />
         <item itemvalue="npm.prod" />
-        <item itemvalue="npm.start-server" />
       </list>
     </recent_temporary>
   </component>
@@ -179,7 +209,11 @@
       <workItem from="1563837614303" duration="4884000" />
       <workItem from="1563922847764" duration="2469000" />
       <workItem from="1564861166617" duration="1052000" />
-      <workItem from="1564883114046" duration="34974000" />
+      <workItem from="1564883114046" duration="35715000" />
+      <workItem from="1565446705541" duration="10433000" />
+      <workItem from="1565829289125" duration="31000" />
+      <workItem from="1565829394511" duration="2583000" />
+      <workItem from="1566179542031" duration="2535000" />
     </task>
     <task id="LOCAL-00005" summary="build">
       <created>1562768081938</created>
@@ -356,7 +390,14 @@
       <option name="project" value="LOCAL" />
       <updated>1565020711856</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="navigation">
+      <created>1565021187130</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1565021187130</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
