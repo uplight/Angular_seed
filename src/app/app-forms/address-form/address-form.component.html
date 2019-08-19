@@ -22,7 +22,16 @@
               City is <strong>required</strong>
             </mat-error>
           </mat-form-field>
-
+        <mat-form-field>
+            <mat-select placeholder="Country" formControlName="country">
+                <mat-option *ngFor="let country of countries" [value]="country.id">
+                    {{ country.label }}
+                </mat-option>
+            </mat-select>
+            <mat-error *ngIf="addressForm.controls['country'].hasError('required')">
+                State is <strong>required</strong>
+            </mat-error>
+        </mat-form-field>
           <mat-form-field>
             <mat-select placeholder="State" formControlName="state">
               <mat-option *ngFor="let state of states" [value]="state.abbreviation">

@@ -1,6 +1,8 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import {FormBuilder, Validators} from '@angular/forms';
 import {IQuestionComponent} from '@app/lazy/questions/iquestion-component';
+import {FormAddressService, VOAddressFormat} from '@app/app-forms/address-form/form-address.service';
+import {Observable} from 'rxjs';
 
 export enum InputType {
   TEXT,
@@ -12,7 +14,7 @@ export interface CountryProfile {
   postalCodeLabel: string;
   postalCodeInputType: InputType
   stateLabel: string;
-  states: {[id: string]: string}
+  states: { [id: string]: string }
 }
 
 export interface AddressConfig {
@@ -41,6 +43,7 @@ export class AddressFormComponent implements OnInit {
   addressForm = this.fb.group({
     addressLine1: [null, Validators.required],
     addressLine2: null,
+    country: [null, Validators.required],
     city: [null, Validators.required],
     state: [null, Validators.required],
     postalCode: [null, Validators.compose([
@@ -49,15 +52,40 @@ export class AddressFormComponent implements OnInit {
   });
 
 
+  countries: { label: string, id: string } [];
+  format: VOAddressFormat;
+  sates: { [id: string]: string };
+  statesLabel: string;
 
-
-  constructor(private fb: FormBuilder) {
+  constructor(
+    private fb: FormBuilder,
+    private formService: FormAddressService
+  ) {
 
   }
 
   onSubmit() {
     alert('Thanks!');
   }
+
   ngOnInit(): void {
+    this.formService.addresses$().subscribe(addr => {
+      console.log(addr);
+      const cas = []
+      for (const str in addr) {
+        if (addr.hasOwnProperty(str)) {
+          cas.push({
+            id: str,
+            label: addr[str].label
+          })
+        }
+      }
+      console.log(cas)
+      this.countries = cas;
+      this.format = addr;
+    })
+
   }
+
 }
+
