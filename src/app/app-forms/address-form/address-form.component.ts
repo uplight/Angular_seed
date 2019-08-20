@@ -1,8 +1,10 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {FormBuilder, Validators} from '@angular/forms';
 import {IQuestionComponent} from '@app/lazy/questions/iquestion-component';
-import {FormAddressService, VOAddressFormat} from '@app/app-forms/address-form/form-address.service';
+import {AMCountry, FormAddressService} from '@app/app-forms/address-form/form-address.service';
 import {Observable} from 'rxjs';
+import {filter, tap} from 'rxjs/operators';
+import {ARRAY} from '@app/utils/array/ARRAY';
 
 export enum InputType {
   TEXT,
@@ -21,7 +23,7 @@ export interface AddressConfig {
   countries: string[];
 }
 
-export interface VOAddress {
+export interface AMAddress {
   addressLine1: string;
   addressLine2: string;
   country: string;
@@ -29,6 +31,10 @@ export interface VOAddress {
   postalCode: string;
 }
 
+export interface VMSelect {
+  id: string;
+  label: string;
+}
 
 @Component({
   selector: 'app-address-form',
@@ -38,9 +44,9 @@ export interface VOAddress {
 export class AddressFormComponent implements OnInit {
 
   @Input() addressConfig: AddressConfig;
-  @Output() valid: EventEmitter<VOAddress> = new EventEmitter<VOAddress>();
+  @Output() valid: EventEmitter<AMAddress> = new EventEmitter<AMAddress>();
 
-  addressForm = this.fb.group({
+  addressGroup = this.fb.group({
     addressLine1: [null, Validators.required],
     addressLine2: null,
     country: [null, Validators.required],
@@ -52,9 +58,9 @@ export class AddressFormComponent implements OnInit {
   });
 
 
-  countries: { label: string, id: string } [];
-  format: VOAddressFormat;
-  sates: { [id: string]: string };
+  countries: AMCountry [];
+  states: VMSelect [];
+  states$: Observable<VMSelect[]>;
   statesLabel: string;
 
   constructor(
@@ -69,21 +75,28 @@ export class AddressFormComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.formService.addresses$().subscribe(addr => {
-      console.log(addr);
-      const cas = []
-      for (const str in addr) {
-        if (addr.hasOwnProperty(str)) {
-          cas.push({
-            id: str,
-            label: addr[str].label
-          })
-        }
-      }
-      console.log(cas)
-      this.countries = cas;
-      this.format = addr;
+    this.formService.loadAllData();
+    this.formService.countries$
+      .subscribe(v => this.countries = v ? ARRAY.sortBy(v, 'label') : null)
+    this.addressGroup.controls['country'].valueChanges.pipe(
+      tap(v => {
+        const props = this.formService.getCountry(v);
+        console.log(props);
+        this.statesLabel = props.statesLabel;
+        this.states = props.states ? ARRAY.toArray(props.states) : null;
+      })
+    ).subscribe(v => {
+      console.log(v)
+
     })
+
+    /* this.formService.addresses$().subscribe(addr => {
+       console.log(addr);
+
+       console.log(cas)
+       this.countries = cas;
+       this.format = addr;
+     })*/
 
   }
 

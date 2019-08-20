@@ -1,8 +1,13 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {BehaviorSubject, Observable} from 'rxjs';
-import {filter, map, share, shareReplay} from 'rxjs/operators';
-export interface VOAddressFormat {
+import {BehaviorSubject, Observable, Subject} from 'rxjs';
+import {filter, map, share, shareReplay, tap} from 'rxjs/operators';
+import {UtilsAddress} from '@app/app-forms/address-form/utils-address';
+export interface AMCountry {
+  label: string;
+  id: string;
+}
+export interface SOAddressFormat {
   postalCode: {
     label: string,
     mask: string
@@ -11,23 +16,36 @@ export interface VOAddressFormat {
   states: { [code: string]: string}
 };
 
+
 @Injectable({
   providedIn: 'root'
 })
 export class FormAddressService {
 
-  private addressesMeta$: BehaviorSubject<VOAddressFormat> = new BehaviorSubject<VOAddressFormat>(null)
-  addressesFormat$: Observable<VOAddressFormat> = this.addressesMeta$.asObservable().pipe(filter(v => !!v))
-  constructor(
+  allData: SOAddressFormat
+   constructor(
     private http: HttpClient
   ) {
 
   }
 
-  addresses$ (): Observable<VOAddressFormat> {
-    return this.http.get('assets/mocks/address-data.json').pipe(
-      share(),
-      map((v: any) => v.payload.countries)
-    )
+  getCountry(id: string): SOAddressFormat {
+    return this.allData[id];
   }
+  loadAllData() {this.http.get('assets/mocks/address-data.json').pipe(
+      share(),
+      map((v: any) => v.payload.countries),
+      tap(data => {
+        console.log(data);
+        this.allData = data;
+        const countries: AMCountry[] = UtilsAddress.parseCountries(data)
+        this.countries$.next(countries);
+      })
+    ).subscribe(data => {
+
+  });
+
+  }
+  countries$: BehaviorSubject<AMCountry[]> = new BehaviorSubject(null);
+
 }

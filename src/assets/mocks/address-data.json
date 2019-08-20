@@ -15,7 +15,7 @@
           "label": "Postal Code",
           "mask": "S0S S0S"
         },
-        "statesLabel": "Provinces",
+        "statesLabel": "Province",
         "states": {
           "AB": "Alberta",
           "BC": "British Columbia",

@@ -1,4 +1,4 @@
-<form [formGroup]="addressForm" novalidate (ngSubmit)="onSubmit()">
+<form [formGroup]="addressGroup" novalidate (ngSubmit)="onSubmit()">
   <mat-card>
     <mat-card-header>
       <mat-card-title>Address Information</mat-card-title>
@@ -7,7 +7,7 @@
 
           <mat-form-field>
             <input matInput placeholder="Address" formControlName="addressLine1"/>
-            <mat-error *ngIf="addressForm.controls['addressLine1'].hasError('required')">
+            <mat-error *ngIf="addressGroup.controls['addressLine1'].hasError('required')">
               Address is <strong>required</strong>
             </mat-error>
           </mat-form-field>
@@ -18,7 +18,7 @@
 
           <mat-form-field >
             <input matInput placeholder="City" formControlName="city">
-            <mat-error *ngIf="addressForm.controls['city'].hasError('required')">
+            <mat-error *ngIf="addressGroup.controls['city'].hasError('required')">
               City is <strong>required</strong>
             </mat-error>
           </mat-form-field>
@@ -28,17 +28,17 @@
                     {{ country.label }}
                 </mat-option>
             </mat-select>
-            <mat-error *ngIf="addressForm.controls['country'].hasError('required')">
+            <mat-error *ngIf="addressGroup.controls['country'].hasError('required')">
                 State is <strong>required</strong>
             </mat-error>
         </mat-form-field>
           <mat-form-field>
-            <mat-select placeholder="State" formControlName="state">
-              <mat-option *ngFor="let state of states" [value]="state.abbreviation">
-                {{ state.name }}
+            <mat-select placeholder="{{statesLabel}}" formControlName="state" disabled="{{!states}}">
+              <mat-option *ngFor="let state of states" [value]="state.id">
+                {{ state.label }}
               </mat-option>
             </mat-select>
-            <mat-error *ngIf="addressForm.controls['state'].hasError('required')">
+            <mat-error *ngIf="addressGroup.controls['state'].hasError('required')">
               State is <strong>required</strong>
             </mat-error>
           </mat-form-field>
