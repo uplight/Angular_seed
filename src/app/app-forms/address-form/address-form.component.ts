@@ -2,8 +2,8 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {FormBuilder, Validators} from '@angular/forms';
 import {IQuestionComponent} from '@app/lazy/questions/iquestion-component';
 import {AMCountry, FormAddressService} from '@app/app-forms/address-form/form-address.service';
-import {Observable} from 'rxjs';
-import {filter, tap} from 'rxjs/operators';
+import {combineLatest, concat, Observable, merge} from 'rxjs';
+import {filter, map, startWith, tap} from 'rxjs/operators';
 import {ARRAY} from '@app/utils/array/ARRAY';
 
 export enum InputType {
@@ -36,6 +36,8 @@ export interface VMSelect {
   label: string;
 }
 
+const POSTAL_CODE_DEFAULT = {label: '', mask: ''};
+
 @Component({
   selector: 'app-address-form',
   templateUrl: './address-form.component.html',
@@ -45,6 +47,7 @@ export class AddressFormComponent implements OnInit {
 
   @Input() addressConfig: AddressConfig;
   @Output() valid: EventEmitter<AMAddress> = new EventEmitter<AMAddress>();
+
 
   addressGroup = this.fb.group({
     addressLine1: [null, Validators.required],
@@ -62,6 +65,10 @@ export class AddressFormComponent implements OnInit {
   states: VMSelect [];
   states$: Observable<VMSelect[]>;
   statesLabel: string;
+  postalCode: { label: string, mask: string } = POSTAL_CODE_DEFAULT;
+  cities: string[];
+
+  cityOptions$: Observable<string[]>;
 
   constructor(
     private fb: FormBuilder,
@@ -82,22 +89,44 @@ export class AddressFormComponent implements OnInit {
       tap(v => {
         const props = this.formService.getCountry(v);
         console.log(props);
+
         this.statesLabel = props.statesLabel;
+        this.postalCode = props.postalCode || POSTAL_CODE_DEFAULT
         this.states = props.states ? ARRAY.toArray(props.states) : null;
-      })
+        if (this.states) {
+          this.cities = [];
+        } else {
+          this.formService.getCities(v, null).then(cities => {
+            this.cities = cities;
+          })
+        }
+      }),
     ).subscribe(v => {
       console.log(v)
+    });
 
-    })
+    this.addressGroup.controls['state'].valueChanges.subscribe(state => {
+      const country: string = this.addressGroup.get('country').value;
+      this.formService.getCities(country, state).then(cities => {
+        this.cities = cities;
+      })
+    });
 
-    /* this.formService.addresses$().subscribe(addr => {
-       console.log(addr);
+    this.cityOptions$ = this.addressGroup.controls['city'].valueChanges
+      .pipe(
+        startWith(''),
+        map(value => this._filter(value)),
+        tap(v => console.log(v))
+      );
+  }
 
-       console.log(cas)
-       this.countries = cas;
-       this.format = addr;
-     })*/
-
+  private _filter(value: string): string[] {
+    console.log(value, this.cities)
+    if (!this.cities || !value) {
+      return null
+    }
+    const filterValue = value.toLowerCase();
+    return this.cities.filter(option => option.toLowerCase().indexOf(filterValue) === 0);
   }
 
 }

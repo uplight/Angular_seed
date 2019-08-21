@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {
+  MatAutocompleteModule,
   MatButtonModule,
   MatCardModule,
   MatCheckboxModule, MatDialogModule,
@@ -31,7 +32,8 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     MatToolbarModule,
     MatTreeModule,
     MatTabsModule,
-    MatTableModule
+    MatTableModule,
+    MatAutocompleteModule
   ],
 
   imports: [
@@ -52,7 +54,8 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     MatToolbarModule,
     MatTreeModule,
     MatTabsModule,
-    MatTableModule
+    MatTableModule,
+    MatAutocompleteModule
   ]
 })
 export class MaterialMatModule { }

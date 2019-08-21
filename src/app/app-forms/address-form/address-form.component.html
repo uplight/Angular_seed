@@ -17,7 +17,10 @@
           </mat-form-field>
 
           <mat-form-field >
-            <input matInput placeholder="City" formControlName="city">
+            <input matInput  [matAutocomplete]="auto" placeholder="City" formControlName="city">
+              <mat-autocomplete #auto="matAutocomplete">
+                  <mat-option *ngFor="let option of cityOptions$ | async" [value]="option">{{option}}</mat-option>
+              </mat-autocomplete>
             <mat-error *ngIf="addressGroup.controls['city'].hasError('required')">
               City is <strong>required</strong>
             </mat-error>
@@ -44,8 +47,8 @@
           </mat-form-field>
 
           <mat-form-field>
-            <input matInput #postalCode maxlength="5" placeholder="Postal Code" type="number" formControlName="postalCode">
-            <mat-hint align="end">{{postalCode.value.length}} / 5</mat-hint>
+            <input matInput  maxlength="5" placeholder="{{postalCode.label}}" formControlName="postalCode">
+            <mat-hint align="end">{{postalCode.mask}}</mat-hint>
           </mat-form-field>
 
     </mat-card-content>
