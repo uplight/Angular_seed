@@ -1,27 +1,21 @@
-.full-width {
-  width: 100%;
-}
 
-.shipping-card {
-  min-width: 120px;
-  margin: 20px auto;
-}
 
-.mat-radio-button {
-  display: block;
-  margin: 5px 0;
-}
+/*select {
+    font-size: 14px;
+    line-height: 21px;
+    width: 100%;
+    height: 40px;
+    padding: 9px 16px;
+    border: 1px solid #ced6e2;
+    border-radius: 3px;
+    color: #394352;
+    text-decoration: none;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #fff;
+    background-size: 20px 18px;
+    background-position: calc(100% - 2px) 50%;
+}*/
 
-.row {
-  display: flex;
-  flex-direction: row;
-}
-
-.col {
-  flex: 1;
-  margin-right: 20px;
-}
-
-.col:last-child {
-  margin-right: 0;
-}

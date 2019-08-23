@@ -2,15 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cccaba2c-ae1b-4189-8325-1c7cc30939b6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/mocks/cities_CA.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/mocks/cities_IL.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/mocks/cities_US.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-forms/address-form/address-form.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-forms/address-form/address-form.component.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app-forms/address-form/address-form.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-forms/address-form/address-form.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app-forms/address-form/address-form.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-forms/address-form/address-form.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-forms/address-form/form-address.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-forms/address-form/form-address.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/material/material-app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/material/material-app.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/material/material-mat.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/material/material-mat.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/mocks/address-data.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/mocks/address-data.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -188,7 +187,10 @@
       <workItem from="1564883114046" duration="34974000" />
       <workItem from="1565287586950" duration="296000" />
       <workItem from="1566232380984" duration="10972000" />
-      <workItem from="1566404800322" duration="9384000" />
+      <workItem from="1566404800322" duration="9451000" />
+      <workItem from="1566420713834" duration="4116000" />
+      <workItem from="1566494652581" duration="6310000" />
+      <workItem from="1566573764807" duration="12040000" />
     </task>
     <task id="LOCAL-00005" summary="build">
       <created>1562768081938</created>
@@ -393,7 +395,14 @@
       <option name="project" value="LOCAL" />
       <updated>1566336603027</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="city functionality">
+      <created>1566417591165</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1566417591165</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -413,7 +422,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="update" />
     <MESSAGE value="update 8.2" />
     <MESSAGE value="folders structure" />
     <MESSAGE value="routing" />
@@ -438,6 +446,7 @@
     <MESSAGE value="ignore" />
     <MESSAGE value="countries data" />
     <MESSAGE value="country and states work" />
-    <option name="LAST_COMMIT_MESSAGE" value="country and states work" />
+    <MESSAGE value="city functionality" />
+    <option name="LAST_COMMIT_MESSAGE" value="city functionality" />
   </component>
 </project>

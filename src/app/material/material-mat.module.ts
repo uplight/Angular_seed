@@ -33,6 +33,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     MatTreeModule,
     MatTabsModule,
     MatTableModule,
+    MatCheckboxModule,
     MatAutocompleteModule
   ],
 

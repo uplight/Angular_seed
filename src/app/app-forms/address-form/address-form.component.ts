@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {FormBuilder, Validators} from '@angular/forms';
+import {FormBuilder, FormControl, Validators} from '@angular/forms';
 import {IQuestionComponent} from '@app/lazy/questions/iquestion-component';
 import {AMCountry, FormAddressService} from '@app/app-forms/address-form/form-address.service';
 import {combineLatest, concat, Observable, merge} from 'rxjs';
@@ -55,6 +55,7 @@ export class AddressFormComponent implements OnInit {
     country: [null, Validators.required],
     city: [null, Validators.required],
     state: [null, Validators.required],
+    yes: true,
     postalCode: [null, Validators.compose([
       Validators.required, Validators.minLength(5), Validators.maxLength(5)])
     ]
@@ -69,6 +70,7 @@ export class AddressFormComponent implements OnInit {
   cities: string[];
 
   cityOptions$: Observable<string[]>;
+  countryControl = new FormControl('', Validators.required);
 
   constructor(
     private fb: FormBuilder,

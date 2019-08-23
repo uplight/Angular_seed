@@ -14,7 +14,7 @@ import {AuthInterceptor} from '@app/features/auth/auth-interceptor';
 import {CommonModule} from '@angular/common';
 import {RouterModule} from '@angular/router';
 
-import {MatButtonModule, MatSidenavModule} from '@angular/material';
+import {MAT_LABEL_GLOBAL_OPTIONS, MatButtonModule, MatSidenavModule} from '@angular/material';
 import {is_mobile, IS_MOBILE} from '@app/core/is-mobile';
 import {environment} from '../environments/environment';
 import {RouterState, StoreRouterConnectingModule} from '@ngrx/router-store';
@@ -99,7 +99,7 @@ import {AppRoutingModule} from '@app/routing/app-routing.module';
       useClass: AuthInterceptor,
       multi: true
     },
-
+    {provide: MAT_LABEL_GLOBAL_OPTIONS, useValue: {float: 'never'}}
   ],
   bootstrap: [AppComponent]
 })

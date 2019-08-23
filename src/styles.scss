@@ -11,10 +11,10 @@
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
 $candy-app-primary: mat-palette($mat-green);
-$candy-app-accent:  mat-palette($mat-pink, A200, A100, A400);
+$candy-app-accent: mat-palette($mat-pink, A200, A100, A400);
 
 // The warn palette is optional (defaults to red).
-$candy-app-warn:    mat-palette($mat-amber);
+$candy-app-warn: mat-palette($mat-amber);
 
 // Create the theme object (a Sass map containing all of the palettes).
 $candy-app-theme: mat-light-theme($candy-app-primary, $candy-app-accent, $candy-app-warn);
@@ -24,16 +24,118 @@ $candy-app-theme: mat-light-theme($candy-app-primary, $candy-app-accent, $candy-
 // that you are using.
 @include angular-material-theme($candy-app-theme);
 
-.mat-tab-body-content { &.ng-animating { overflow: hidden !important; } }
-.navigation > .mat-tab-header{
+.mat-form-field label{
+  height: 0;
+  display: block;
+  transform: translateY(-30px);
+  color: #617089;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+mat-form-field:has(label) {
+  margin-top: 20px;
+  background: #1c8150;
+}
+.mat-form-field::before {
+  font-weight: 700;
+}
+.mat-form-field {
+  min-width: 100%;
+}
+.mat-form-field input {
+  font-size: 14px;
+  line-height: 21px;
+  width: 100%;
+  padding: 0 16px 10px 16px
+}
+.mat-form-field select {
+  -webkit-writing-mode: horizontal-tb !important;
+  text-rendering: auto;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: start;
+  -webkit-appearance: menulist;
+  box-sizing: border-box;
+  align-items: center;
+  white-space: pre;
+  -webkit-rtl-ordering: logical;
+  margin: 0em;
+  font: 400 13.3333px Arial;
+  border-image: initial;
+  font-size: 14px;
+  line-height: 21px;
+  width: 100%;
+  height: 40px;
+  padding: 9px 16px;
+  color: #394352;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2393a0b3'%3E%3Cpath d='M8 12.55l-1.83-1.83-.94.95L7.56 14h.88l2.33-2.33-.94-.95zM8 3.61l1.83 1.83.94-.94L8.28 2h-.56L5.23 4.5l.94.94z'/%3E%3Cpath fill='none' d='M0 0h16v16H0z'/%3E%3C/svg%3E");
+  background-size: 20px 18px;
+  background-position: right;
+  background-repeat: no-repeat;
+}
+
+.mat-form-field-type-mat-native-select .mat-form-field-infix::after {
+  border: none !important;
+}
+
+.mat-form-field-flex {
+  height: 100%;
+  margin-top: 0;
+  padding: 17px 0 1px 0 !important;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-infix {
+  padding: 0;
+  border-top: none;
+  width: 100%;
+}
+
+
+/*.mat-form-field-flex {
+  border: solid  #0070d2 1px;
+}*/
+
+.mat-tab-body-content {
+  &.ng-animating {
+    overflow: hidden !important;
+  }
+}
+
+.navigation > .mat-tab-header {
   display: none;
 }
-.navigation .level-1{
-  padding-left:8px;
+
+/*.mat-select-arrow {
+  width: 1em !important;
+  height: 1.5em !important;
+  border-left:none !important;
+  border-right:none !important;
+  border-top: none !important;
+  margin:-2px !important;
+  background-size: cover;
+  opacity: 0.5;
+  transform: scale(1);
+  background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAQAAABIkb+zAAABXElEQVR4Ae2bAWZDURBFH4iIbqBVBIBI6QyyvSJAAAGykAqSwoes5vtkAWnBo/xeGuLfxzkrOAdgZqY8CgAAAACIbWxb1t/lLW+xa1pfJ/jr6wR/fZ3gr68T/PWbTIh9FbZPEPoiYd+0vk7w1zdNEPpxjKN9gtA/L+fLeZztE+Lwl375wT5B6+uEJvRlwsFfvyZkZ5Og9bOr+r/IhVnC22v0Y/q5KJWKSIg+n8s05Dp6ra8Sqv66TEeuc9D6OiGHqj8VGTmM6OuES9WPMj0ZcRX6I6ye8lL1HchNfo3oy4Q4TawPAAAAAAAAAACQmzjdMdja2OiL0aKYjsbVaTL6v+FuZzPczWhpvK63A/4LDr1i0hsyvWJ6f7HfUeolH2tWg0W3d4LWN05YzbR+A9dCq5k+9PBP+BT6LZ+ccfTH2aVI0PqcHjscf3N+7/8AwQsKT0A1IT7KgwAAAACAb1q0XrLZbcNhAAAAAElFTkSuQmCC);
+}*/
+.navigation .level-1 {
+  padding-left: 8px;
 }
+
 body {
   margin: 0;
 }
+
 .example-icon {
   padding: 0 14px;
 }
@@ -67,7 +169,7 @@ body {
   box-shadow: #1c8150 3px 10px 10px;
 }
 
-.warn{
+.warn {
   width: 200px;
 }
 
@@ -103,10 +205,31 @@ body {
   display: block;
 }
 
-.rating-link-stars { font-size: 1rem; line-height: 1.25; display: inline-block; position: relative; height: 1.0625rem; }
-.rating-link-stars::before { color: #efefef; content: '\2605\2605\2605\2605\2605'; }
-.rating-link-stars-overlay { color: #f58220; position: absolute; padding: 0; top: 0; left: 0; overflow: hidden; }
-.rating-link-stars-overlay::before { content: '\2605\2605\2605\2605\2605'; }
+.rating-link-stars {
+  font-size: 1rem;
+  line-height: 1.25;
+  display: inline-block;
+  position: relative;
+  height: 1.0625rem;
+}
+
+.rating-link-stars::before {
+  color: #efefef;
+  content: '\2605\2605\2605\2605\2605';
+}
+
+.rating-link-stars-overlay {
+  color: #f58220;
+  position: absolute;
+  padding: 0;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.rating-link-stars-overlay::before {
+  content: '\2605\2605\2605\2605\2605';
+}
 
 a {
   margin: 2px;
