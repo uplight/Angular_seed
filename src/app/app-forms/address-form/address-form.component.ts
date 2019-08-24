@@ -86,7 +86,7 @@ export class AddressFormComponent implements OnInit {
   ngOnInit(): void {
     this.formService.loadAllData();
     this.formService.countries$
-      .subscribe(v => this.countries = v ? ARRAY.sortBy(v, 'label') : null)
+      .subscribe(v => this.countries = v ? ARRAY.sortBy(v, 'label') : null);
     this.addressGroup.controls['country'].valueChanges.pipe(
       tap(v => {
         const props = this.formService.getCountry(v);
