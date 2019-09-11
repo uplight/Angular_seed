@@ -4,9 +4,9 @@ import {
   MatAutocompleteModule,
   MatButtonModule,
   MatCardModule,
-  MatCheckboxModule, MatDialogModule,
+  MatCheckboxModule, MatDatepickerModule, MatDialogModule,
   MatFormFieldModule,
-  MatIconModule, MatInputModule, MatListModule,
+  MatIconModule, MatInputModule, MatListModule, MatNativeDateModule,
   MatRadioModule,
   MatSelectModule,
   MatSidenavModule, MatTableModule, MatTabsModule, MatToolbarModule, MatTreeModule
@@ -34,7 +34,9 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     MatTabsModule,
     MatTableModule,
     MatCheckboxModule,
-    MatAutocompleteModule
+    MatAutocompleteModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
 
   imports: [
@@ -56,7 +58,12 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     MatTreeModule,
     MatTabsModule,
     MatTableModule,
-    MatAutocompleteModule
+    MatAutocompleteModule,
+    MatDatepickerModule,
+    MatNativeDateModule
+  ],
+  providers: [
+
   ]
 })
 export class MaterialMatModule { }

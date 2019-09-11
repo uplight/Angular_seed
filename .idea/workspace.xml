@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cccaba2c-ae1b-4189-8325-1c7cc30939b6" name="Default Changelist" comment="" />
+    <list default="true" id="cccaba2c-ae1b-4189-8325-1c7cc30939b6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proxy.conf.json" beforeDir="false" afterPath="$PROJECT_DIR$/proxy.conf.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-forms/address-form/address-form.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-forms/address-form/address-form.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-forms/address-form/form-address.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-forms/address-form/form-address.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-forms/app-forms.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-forms/app-forms.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/lazy/questions/quest-entry-page/quest-entry-page.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/lazy/questions/quest-entry-page/quest-entry-page.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/lazy/questions/quest-entry-page/quest-entry-page.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/lazy/questions/quest-entry-page/quest-entry-page.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/material/material-mat.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/material/material-mat.module.ts" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,6 +191,16 @@
       <workItem from="1566420713834" duration="4116000" />
       <workItem from="1566494652581" duration="6310000" />
       <workItem from="1566573764807" duration="12184000" />
+      <workItem from="1566598395912" duration="146000" />
+      <workItem from="1566824034930" duration="1163000" />
+      <workItem from="1567017354864" duration="2492000" />
+      <workItem from="1567093797488" duration="12000" />
+      <workItem from="1567110074084" duration="2923000" />
+      <workItem from="1567716181709" duration="1372000" />
+      <workItem from="1567804827259" duration="99000" />
+      <workItem from="1567804946293" duration="1276000" />
+      <workItem from="1568051822532" duration="51000" />
+      <workItem from="1568233186168" duration="1878000" />
     </task>
     <task id="LOCAL-00005" summary="build">
       <created>1562768081938</created>
@@ -400,7 +419,14 @@
       <option name="project" value="LOCAL" />
       <updated>1566588418288</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="qt styles">
+      <created>1566598424550</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1566598424550</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

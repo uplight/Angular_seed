@@ -15,11 +15,11 @@ export class QuestEntryPageComponent implements OnInit {
     private library: ComponentsLibraryService ) { }
 
   ngOnInit() {
-
+/*
    // const address = this.library.getComponent('Address', {validator: ['one', 'two']});
    // const componentFactory = this.componentFactoryResolver.resolveComponentFactory(address.component);
    // const viewContainerRef = this.hostDirective.viewContainerRef;
-  // const componentRef = viewContainerRef.createComponent(componentFactory);
+  // const componentRef = viewContainerRef.createComponent(componentFactory);*/
   }
 
 }

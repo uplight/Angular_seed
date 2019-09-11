@@ -4,12 +4,13 @@ import {BehaviorSubject, Observable, Subject} from 'rxjs';
 import {filter, map, share, shareReplay, tap} from 'rxjs/operators';
 import {UtilsAddress} from '@app/app-forms/address-form/utils-address';
 
+
 export interface AMCountry {
   label: string;
   id: string;
 }
 
-export interface SOAddressFormat {
+export interface SMAddressFormat {
   postalCode: {
     label: string,
     mask: string
@@ -32,7 +33,7 @@ export class FormAddressService {
     })
   }
 
-  allData: SOAddressFormat;
+  allData: SMAddressFormat;
   cities: { [country: string]: { city: string, state: string }[] } = {};
 
   constructor(
@@ -41,7 +42,7 @@ export class FormAddressService {
 
   }
 
-  getCountry(id: string): SOAddressFormat {
+  getCountry(id: string): SMAddressFormat {
     return this.allData[id];
   }
 

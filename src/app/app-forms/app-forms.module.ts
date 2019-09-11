@@ -4,6 +4,7 @@ import {AddressFormComponent} from '@app/app-forms/address-form/address-form.com
 import {MaterialAppModule} from '@app/material/material-app.module';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MaterialMatModule} from '@app/material/material-mat.module';
+import {MatDatepickerModule} from '@angular/material';
 
 
 
@@ -17,7 +18,8 @@ import {MaterialMatModule} from '@app/material/material-mat.module';
     MaterialAppModule,
     FormsModule,
     ReactiveFormsModule,
-    MaterialMatModule
+    MaterialMatModule,
+    MatDatepickerModule
   ]
 })
 export class AppFormsModule { }
