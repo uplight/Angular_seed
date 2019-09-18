@@ -5,23 +5,29 @@
         </mat-card-header>
         <mat-card-content>
 
-<!--------------------------------->
+
             <mat-form-field appearance="outline">
-                <label class="form-label">Address line 1</label>
+                <label>Address line 1</label>
                 <input matInput placeholder="Address" formControlName="addressLine1"/>
                 <mat-error *ngIf="addressGroup.controls['addressLine1'].hasError('required')">
                     Address is <strong>required</strong>
                 </mat-error>
             </mat-form-field>
-
             <mat-form-field appearance="outline">
-                <label class="form-label">Address line 2</label>
                 <input matInput placeholder="Address 2" formControlName="addressLine2"/>
             </mat-form-field>
 
-<!------------------------------->
             <mat-form-field appearance="outline">
-                <label>Country</label>
+                <input matInput [matAutocomplete]="auto" placeholder="City" formControlName="city">
+                <mat-autocomplete #auto="matAutocomplete">
+                    <mat-option *ngFor="let option of cityOptions$ | async" [value]="option">{{option}}</mat-option>
+                </mat-autocomplete>
+                <mat-error *ngIf="addressGroup.controls['city'].hasError('required')">
+                    City is <strong>required</strong>
+                </mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
                 <select matNativeControl placeholder="Country"
                         formControlName="country"
                 >
@@ -35,7 +41,6 @@
             </mat-form-field>
 
             <mat-form-field appearance="outline">
-                <label>{{statesLabel}}</label>
                 <select matNativeControl placeholder="{{statesLabel}}" formControlName="state"
                 >
                     <option *ngFor="let state of states" [value]="state.id">
@@ -48,39 +53,17 @@
             </mat-form-field>
 
             <mat-form-field appearance="outline">
-                <label>City</label>
-                <input matInput [matAutocomplete]="auto" placeholder="City" formControlName="city">
-                <mat-autocomplete #auto="matAutocomplete">
-                    <mat-option *ngFor="let option of cityOptions$ | async" [value]="option">{{option}}</mat-option>
-                </mat-autocomplete>
-                <mat-error *ngIf="addressGroup.controls['city'].hasError('required')">
-                    City is <strong>required</strong>
-                </mat-error>
-            </mat-form-field>
-
-            <mat-form-field appearance="outline">
-                <label>{{postalCode.label}}</label>
                 <input matInput maxlength="5" placeholder="{{postalCode.label}}" formControlName="postalCode">
                 <mat-hint align="end">{{postalCode.mask}}</mat-hint>
             </mat-form-field>
 
-
-            <label>From:</label>
-            <mat-form-field appearance="outline">
-
-                <input matInput [matDatepicker]="picker1" placeholder="Choose a date">
-                <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
-                <mat-datepicker #picker1></mat-datepicker>
-            </mat-form-field>
-
-            <mat-form-field appearance="outline">
-                <label>To:</label>
-                <input matInput [matDatepicker]="picker2" placeholder="Choose a date">
-                <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
-                <mat-datepicker #picker2></mat-datepicker>
-            </mat-form-field>
+            <mat-checkbox
+                    formControlName="yes"
+            >Select me
+            </mat-checkbox>
 
         </mat-card-content>
+
         <mat-card-actions>
             <button mat-raised-button color="primary" type="submit">Submit</button>
         </mat-card-actions>

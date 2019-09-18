@@ -71,7 +71,7 @@ mat-form-field:has(label) {
   font-size: 14px;
   line-height: 21px;
   width: 100%;
-  height: 40px;
+  height: 47px;
   padding: 9px 16px;
   color: #394352;
   text-decoration: none;
@@ -102,10 +102,6 @@ mat-form-field:has(label) {
 }
 
 
-/*.mat-form-field-flex {
-  border: solid  #0070d2 1px;
-}*/
-
 .mat-tab-body-content {
   &.ng-animating {
     overflow: hidden !important;
@@ -116,18 +112,6 @@ mat-form-field:has(label) {
   display: none;
 }
 
-/*.mat-select-arrow {
-  width: 1em !important;
-  height: 1.5em !important;
-  border-left:none !important;
-  border-right:none !important;
-  border-top: none !important;
-  margin:-2px !important;
-  background-size: cover;
-  opacity: 0.5;
-  transform: scale(1);
-  background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAQAAABIkb+zAAABXElEQVR4Ae2bAWZDURBFH4iIbqBVBIBI6QyyvSJAAAGykAqSwoes5vtkAWnBo/xeGuLfxzkrOAdgZqY8CgAAAACIbWxb1t/lLW+xa1pfJ/jr6wR/fZ3gr68T/PWbTIh9FbZPEPoiYd+0vk7w1zdNEPpxjKN9gtA/L+fLeZztE+Lwl375wT5B6+uEJvRlwsFfvyZkZ5Og9bOr+r/IhVnC22v0Y/q5KJWKSIg+n8s05Dp6ra8Sqv66TEeuc9D6OiGHqj8VGTmM6OuES9WPMj0ZcRX6I6ye8lL1HchNfo3oy4Q4TawPAAAAAAAAAACQmzjdMdja2OiL0aKYjsbVaTL6v+FuZzPczWhpvK63A/4LDr1i0hsyvWJ6f7HfUeolH2tWg0W3d4LWN05YzbR+A9dCq5k+9PBP+BT6LZ+ccfTH2aVI0PqcHjscf3N+7/8AwQsKT0A1IT7KgwAAAACAb1q0XrLZbcNhAAAAAElFTkSuQmCC);
-}*/
 .navigation .level-1 {
   padding-left: 8px;
 }
