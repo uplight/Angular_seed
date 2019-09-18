@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cccaba2c-ae1b-4189-8325-1c7cc30939b6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/server/db-json.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proxy.conf.json" beforeDir="false" afterPath="$PROJECT_DIR$/proxy.conf.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-forms/address-form/address-form.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-forms/address-form/address-form.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-forms/address-form/form-address.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-forms/address-form/form-address.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-forms/app-forms.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-forms/app-forms.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/lazy/questions/quest-entry-page/quest-entry-page.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/lazy/questions/quest-entry-page/quest-entry-page.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/lazy/questions/quest-entry-page/quest-entry-page.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/lazy/questions/quest-entry-page/quest-entry-page.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/material/material-mat.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/material/material-mat.module.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,7 +30,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/server" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -49,19 +43,19 @@
     <property name="ts.external.directory.path" value="C:\Users\012825\Documents\Projects\Angular_seed\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Projects\Angular\Angular_seed\src\app\core\layout" />
-      <recent name="D:\Projects\Angular\Angular_seed\src\app" />
-      <recent name="D:\Projects\Angular\Angular_seed\src\app\core" />
-      <recent name="D:\Projects\Angular\Angular_seed\src\app\core\services\apis" />
-      <recent name="D:\Projects\Angular\Angular_seed\src\app\material" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\012825\Documents\Projects\Angular_seed\src\assets\mocks" />
       <recent name="D:\Projects\Angular\Angular_seed\src\app" />
       <recent name="D:\Projects\Angular\Angular_seed\src\app\features\auth" />
       <recent name="D:\Projects\Angular\Angular_seed\src\app\ui" />
       <recent name="D:\Projects\Angular\Angular_seed\src\app\core\layout" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\012825\Documents\Projects\Angular_seed\server" />
+      <recent name="D:\Projects\Angular\Angular_seed\src\app\core\layout" />
+      <recent name="D:\Projects\Angular\Angular_seed\src\app" />
+      <recent name="D:\Projects\Angular\Angular_seed\src\app\core" />
+      <recent name="D:\Projects\Angular\Angular_seed\src\app\core\services\apis" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -200,7 +194,9 @@
       <workItem from="1567804827259" duration="99000" />
       <workItem from="1567804946293" duration="1276000" />
       <workItem from="1568051822532" duration="51000" />
-      <workItem from="1568233186168" duration="1878000" />
+      <workItem from="1568233186168" duration="1968000" />
+      <workItem from="1568302069900" duration="964000" />
+      <workItem from="1568837922414" duration="608000" />
     </task>
     <task id="LOCAL-00005" summary="build">
       <created>1562768081938</created>
@@ -426,7 +422,14 @@
       <option name="project" value="LOCAL" />
       <updated>1566598424550</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="proxy.config">
+      <created>1568236786606</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1568236786606</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -446,7 +449,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="folders structure" />
     <MESSAGE value="routing" />
     <MESSAGE value="build" />
     <MESSAGE value="optim" />
@@ -471,6 +473,7 @@
     <MESSAGE value="country and states work" />
     <MESSAGE value="city functionality" />
     <MESSAGE value="qt styles" />
-    <option name="LAST_COMMIT_MESSAGE" value="qt styles" />
+    <MESSAGE value="proxy.config" />
+    <option name="LAST_COMMIT_MESSAGE" value="proxy.config" />
   </component>
 </project>
