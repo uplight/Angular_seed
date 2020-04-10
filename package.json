@@ -42,7 +42,7 @@
     "@ngrx/store-devtools": "^8.1.0",
     "@types/lodash.findindex": "^4.6.6",
     "argon2": "^0.24.0",
-    "auth0-js": "^9.11.2",
+    "auth0-js": "^9.13.2",
     "body-parser": "^1.19.0",
     "command-line-args": "^5.1.1",
     "cookie-parser": "^1.4.4",
