@@ -52,7 +52,7 @@
     "json-server": "^0.12.1",
     "jsonwebtoken": "^8.5.1",
     "jwks-rsa": "^1.6.0",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.21",
     "lodash.findindex": "^4.6.0",
     "moment": "^2.24.0",
     "password-validator": "^4.1.1",
